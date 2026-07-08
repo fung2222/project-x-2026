@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f766e">
+<title>模擬組合 - Project X 2026</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">X</span>
+      <span>Project X 2026</span>
+    </div>
+    <div class="update-time" id="update-time">載入中…</div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link"><span class="nav-icon">🏠</span>首頁</a>
+    <a href="signals.html" class="nav-link"><span class="nav-icon">📊</span>買賣訊號</a>
+    <a href="portfolio.html" class="nav-link"><span class="nav-icon">💼</span>模擬組合</a>
+    <a href="learn.html" class="nav-link"><span class="nav-icon">📚</span>學習中心</a>
+    <a href="reports.html" class="nav-link"><span class="nav-icon">📰</span>每日報告</a>
+  </div>
+</nav>
+
+<main>
+  <div id="content">
+    <div class="loading">載入組合…</div>
+  </div>
+</main>
+
+<footer>
+  <p>⚠️ 本網站只供學習用途，並非投資建議。</p>
+</footer>
+
+<script src="js/common.js"></script>
+<script>
+async function init() {
+  const [portfolio, daily, history] = await Promise.all([
+    loadJSON('portfolio.json'),
+    loadJSON('daily_report.json'),
+    loadJSON('pnl_history.json').catch(() => null)
+  ]);
+
+  if (!portfolio) {
+    document.getElementById('content').innerHTML = '<div class="empty">⚠️ 數據載入失敗</div>';
+    return;
+  }
+
+  setHeaderDate(daily?.date || portfolio.last_updated);
+
+  const fx = daily?.fx_usdhkd || 7.80;
+  const initialUSD = portfolio.account?.initial_usd || 641.03;
+  const totalValue = portfolio.total_value_usd || initialUSD;
+  const totalPnL = portfolio.total_pnl_pct || 0;
+  const totalPnLUSD = portfolio.total_pnl_usd || 0;
+  const cash = portfolio.cash_usd || 0;
+  const positions = portfolio.positions || [];
+
+  // 持倉表
+  const positionsHTML = positions.map(p => {
+    const pnl = p.pnl_pct || 0;
+    const cls = pnl > 0 ? 'up' : pnl < 0 ? 'down' : '';
+    const value = p.value_usd || 0;
+    return `
+      <div class="position-row">
+        <div>
+          <strong>${p.ticker}</strong> · ${p.shares} 股
+          <div class="position-detail">
+            入價 ${formatUSD(p.entry_price)} → 現價 ${formatUSD(p.current_price || p.entry_price)}
+            <br>市值 ${formatUSD(value)} · 佔比 ${(value/totalValue*100).toFixed(1)}%
+          </div>
+        </div>
+        <div class="${cls}" style="font-weight:600;font-size:15px">${formatPct(pnl)}</div>
+      </div>
+    `;
+  }).join('');
+
+  // 交易歷史
+  const tradeLogHTML = (portfolio.trade_log || []).slice().reverse().map(t => `
+    <div class="position-row">
+      <div>
+        <strong>${t.date}</strong> · ${t.action}
+        <div class="position-detail">${escapeHTML(t.details || '')}</div>
+      </div>
+    </div>
+  `).join('') || '<div class="empty">未有交易記錄</div>';
+
+  // 加倉規則
+  const rules = portfolio.add_position_rules || {};
+  const rulesHTML = `
+    <div style="font-size:13px;line-height:1.8">
+      <div><span class="badge badge-buy">買入信號</span> ${escapeHTML(rules.buy_signal || '—')}</div>
+      <div style="margin-top:6px"><span class="badge">觀望信號</span> ${escapeHTML(rules.hold_signal || '—')}</div>
+      <div style="margin-top:6px"><span class="badge badge-sell">小心信號</span> ${escapeHTML(rules.caution_signal || '—')}</div>
+    </div>
+  `;
+
+  document.getElementById('content').innerHTML = `
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">💰 總值</div>
+        <div class="stat-value">${formatUSD(totalValue)}</div>
+        <div style="font-size:11px;color:var(--text-mute)">${formatHKD(totalValue * fx)}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">📈 P&L</div>
+        <div class="stat-value ${totalPnL >= 0 ? 'up' : 'down'}">${formatPct(totalPnL)}</div>
+        <div style="font-size:11px;color:var(--text-mute)">${formatUSD(totalPnLUSD)}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">💵 現金</div>
+        <div class="stat-value">${formatUSD(cash)}</div>
+        <div style="font-size:11px;color:var(--text-mute)">${(cash/totalValue*100).toFixed(1)}% 倉位</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">🎯 起始</div>
+        <div class="stat-value">${formatUSD(initialUSD)}</div>
+        <div style="font-size:11px;color:var(--text-mute)">${portfolio.account?.start_date || '—'}</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💼 當前持倉</h2>
+      ${positionsHTML || '<div class="empty">未有持倉</div>'}
+    </div>
+
+    <div class="card">
+      <h2>⚖️ 倉位配置</h2>
+      <div style="margin-top:8px">
+        ${positions.map(p => {
+          const v = p.value_usd || 0;
+          const pct = (v/totalValue*100).toFixed(1);
+          return `
+            <div style="margin-bottom:10px">
+              <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px">
+                <span><strong>${p.ticker}</strong> · ${p.shares} 股</span>
+                <span>${pct}%</span>
+              </div>
+              <div style="background:var(--bg-soft);height:8px;border-radius:4px;overflow:hidden">
+                <div style="background:var(--accent);height:100%;width:${pct}%;transition:width 0.3s"></div>
+              </div>
+            </div>
+          `;
+        }).join('')}
+        <div style="margin-top:10px">
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px">
+            <span><strong>💵 現金</strong></span>
+            <span>${(cash/totalValue*100).toFixed(1)}%</span>
+          </div>
+          <div style="background:var(--bg-soft);height:8px;border-radius:4px;overflow:hidden">
+            <div style="background:var(--neutral);height:100%;width:${(cash/totalValue*100).toFixed(1)}%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📋 加倉規則</h2>
+      ${rulesHTML}
+    </div>
+
+    <div class="card">
+      <h2>📜 交易歷史</h2>
+      ${tradeLogHTML}
+    </div>
+
+    <div class="card card-soft">
+      <h2>🎯 風控參數</h2>
+      <div style="font-size:13px;line-height:1.8;color:var(--text-soft)">
+        止損：<strong>${portfolio.stop_loss_pct || 10}%</strong>（跌穿即賣出）<br>
+        止盈：<strong>${portfolio.take_profit_pct || 20}%</strong>（到價可獲利）<br>
+        階段：<strong>${portfolio.account?.phase || 'PHASE 1 - 觀察者學習期'}</strong>
+      </div>
+    </div>
+  `;
+}
+
+init();
+</script>
+
+</body>
+</html>

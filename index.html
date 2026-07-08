@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f766e">
+<title>Project X 2026 - 個人投資中心</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">X</span>
+      <span>Project X 2026</span>
+    </div>
+    <div class="update-time" id="update-time">載入中…</div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link"><span class="nav-icon">🏠</span>首頁</a>
+    <a href="signals.html" class="nav-link"><span class="nav-icon">📊</span>買賣訊號</a>
+    <a href="portfolio.html" class="nav-link"><span class="nav-icon">💼</span>模擬組合</a>
+    <a href="learn.html" class="nav-link"><span class="nav-icon">📚</span>學習中心</a>
+    <a href="reports.html" class="nav-link"><span class="nav-icon">📰</span>每日報告</a>
+  </div>
+</nav>
+
+<main>
+  <div id="content">
+    <div class="loading">載入今日報告…</div>
+  </div>
+</main>
+
+<footer>
+  <p>⚠️ 本網站只供學習用途，所有數據來自 Yahoo Finance，僅作模擬練習，並非投資建議。</p>
+  <p>📊 Project X 2026 · 個人投資學習中心</p>
+</footer>
+
+<script src="js/common.js"></script>
+<script>
+async function init() {
+  const [daily, portfolio] = await Promise.all([
+    loadJSON('daily_report.json'),
+    loadJSON('portfolio.json')
+  ]);
+
+  if (!daily || !portfolio) {
+    document.getElementById('content').innerHTML = `
+      <div class="empty">
+        <p>⚠️ 暫時未有今日數據</p>
+        <p style="margin-top:8px;font-size:12px;">系統將於每個交易日 21:30 HKT 自動更新</p>
+      </div>`;
+    return;
+  }
+
+  setHeaderDate(daily.date);
+
+  const regime = daily.regime || '正常市場';
+  const regimeClass = regime.includes('防禦') ? 'sell' : regime.includes('謹慎') ? 'warn' : 'buy';
+  const totalPnL = portfolio.total_pnl_pct || 0;
+  const totalValue = portfolio.total_value_usd || 0;
+  const totalPnLUSD = portfolio.total_pnl_usd || 0;
+  const cash = portfolio.cash_usd || 0;
+  const fx = daily.fx_usdhkd || 7.80;
+
+  const oneLiners = daily.signals.map(s => {
+    const cls = signalClass(s.signal);
+    const arrow = s.change_pct > 0 ? '▲' : s.change_pct < 0 ? '▼' : '━';
+    return `<strong>${s.ticker}</strong> ${arrow}${formatPct(s.change_pct)} <span class="signal signal-${cls}">${signalText(s.signal)}</span>`;
+  }).join('　·　');
+
+  const posList = (portfolio.positions || []).map(p => {
+    const pnl = p.pnl_pct || 0;
+    const cls = pnl > 0 ? 'up' : pnl < 0 ? 'down' : '';
+    return `<div class="position-row">
+      <div>
+        <strong>${p.ticker}</strong> · ${p.shares}股 @ ${formatUSD(p.entry_price)}
+        <div class="position-detail">現價 ${formatUSD(p.current_price || p.entry_price)}</div>
+      </div>
+      <div class="${cls}" style="font-weight:600">${formatPct(pnl)}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('content').innerHTML = `
+    <div class="card" style="background:linear-gradient(135deg,#0f766e 0%,#134e4a 100%);color:white;border:none">
+      <h2 style="color:white">📌 今日一句總結</h2>
+      <p style="font-size:16px;line-height:1.6">${oneLiners}</p>
+      <p style="font-size:13px;margin-top:8px;opacity:0.85">${daily.learning_focus || ''}</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-label">💰 模擬倉總值</div>
+        <div class="stat-value">${formatUSD(totalValue)}</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:2px">${formatHKD(totalValue * fx)}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">📈 總 P&L</div>
+        <div class="stat-value ${totalPnL >= 0 ? 'up' : 'down'}">${formatPct(totalPnL)}</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:2px">${formatUSD(totalPnLUSD)}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">💵 現金</div>
+        <div class="stat-value">${formatUSD(cash)}</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:2px">${formatHKD(cash * fx)}</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">🌡️ VIX</div>
+        <div class="stat-value">${daily.vix || '—'}</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:2px">
+          <span class="signal signal-${regimeClass}">${regime}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>📊 今日核心股訊號</h2>
+      ${daily.signals.map(s => {
+        const ind = s.indicators || {};
+        const cls = signalClass(s.signal);
+        const changeCls = s.change_pct > 0 ? 'up' : s.change_pct < 0 ? 'down' : '';
+        return `
+          <div class="stock-card ${cls}">
+            <div class="stock-header">
+              <div>
+                <span class="stock-ticker">${s.ticker}</span>
+                <span class="badge">RSI ${ind.rsi14 || '—'}</span>
+                <span class="badge">MA50 ${ind.trend || '—'}</span>
+              </div>
+              <div>
+                <span class="stock-price">${formatUSD(s.price)}</span>
+                <span class="stock-change ${changeCls}">${formatPct(s.change_pct)}</span>
+              </div>
+            </div>
+            <div>
+              <span class="signal signal-${cls}">${signalText(s.signal)}</span>
+              <span style="font-size:12px;color:var(--text-mute);margin-left:6px">信心 ${s.confidence}%</span>
+            </div>
+            <div class="reason-block">
+              <h4>💡 為什麼？</h4>
+              ${escapeHTML(s.reason)}
+            </div>
+            <div class="price-target">
+              <div class="target target-sl">
+                <div class="target-label">🛑 止損</div>
+                <div>${formatUSD(s.stop_loss_suggested)} (-10%)</div>
+              </div>
+              <div class="target target-tp">
+                <div class="target-label">🎯 止盈</div>
+                <div>${formatUSD(s.take_profit_suggested)} (+20%)</div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+
+    <div class="card">
+      <h2>💼 模擬持倉</h2>
+      ${posList || '<div class="empty">未有持倉</div>'}
+    </div>
+
+    <div class="card">
+      <h2>📰 觀察名單</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        ${(daily.secondary || []).map(s => `
+          <div style="flex:1;min-width:140px;padding:10px;background:var(--bg-soft);border-radius:8px">
+            <div style="font-weight:600">${s.ticker}</div>
+            <div style="font-size:14px;margin-top:4px">${formatUSD(s.price)}</div>
+            <div class="stock-change ${s.change_pct > 0 ? 'up' : 'down'}" style="font-size:12px">${formatPct(s.change_pct)}</div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="card card-soft">
+      <h2>⚠️ 風險提醒</h2>
+      <p style="font-size:13px;color:var(--text-soft);line-height:1.7">
+        ✅ 數據來源：Yahoo Finance (yfinance)<br>
+        ⚠️ 數據時效：${daily.date}<br>
+        💼 起始資金：HKD 5,000 (US$641)<br>
+        📝 學習比盈利更重要。慢慢來，你正在進步。
+      </p>
+    </div>
+  `;
+}
+
+init();
+</script>
+
+</body>
+</html>

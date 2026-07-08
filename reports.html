@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f766e">
+<title>每日報告 - Project X 2026</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">X</span>
+      <span>Project X 2026</span>
+    </div>
+    <div class="update-time" id="update-time">每日報告</div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link"><span class="nav-icon">🏠</span>首頁</a>
+    <a href="signals.html" class="nav-link"><span class="nav-icon">📊</span>買賣訊號</a>
+    <a href="portfolio.html" class="nav-link"><span class="nav-icon">💼</span>模擬組合</a>
+    <a href="learn.html" class="nav-link"><span class="nav-icon">📚</span>學習中心</a>
+    <a href="reports.html" class="nav-link"><span class="nav-icon">📰</span>每日報告</a>
+  </div>
+</nav>
+
+<main>
+  <div id="content">
+    <div class="loading">載入報告…</div>
+  </div>
+</main>
+
+<footer>
+  <p>⚠️ 本網站只供學習用途，數據來自 Yahoo Finance。</p>
+</footer>
+
+<script src="js/common.js"></script>
+<script>
+async function init() {
+  const index = await loadJSON('reports_index.json');
+
+  if (!index || !index.reports || index.reports.length === 0) {
+    document.getElementById('content').innerHTML = `
+      <div class="card">
+        <h2>📰 每日報告 Archive</h2>
+        <div class="empty">
+          <p>📝 暫未有歷史報告</p>
+          <p style="font-size:12px;margin-top:8px">每日 21:30 HKT 自動生成新報告</p>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  const daily = await loadJSON('daily_report.json');
+  if (daily) setHeaderDate(daily.date);
+
+  const list = index.reports.slice().reverse().map(r => `
+    <div class="position-row">
+      <div>
+        <strong>${r.date}</strong>
+        <div class="position-detail">
+          ${r.summary || ''}
+          ${r.pnl != null ? `· P&L: <span style="color:${r.pnl >= 0 ? 'var(--buy)' : 'var(--sell)'}">${formatPct(r.pnl)}</span>` : ''}
+        </div>
+      </div>
+      <a href="reports/${r.file}" class="badge" style="cursor:pointer">查看 →</a>
+    </div>
+  `).join('');
+
+  document.getElementById('content').innerHTML = `
+    <div class="card">
+      <h2>📰 每日報告 Archive</h2>
+      <p style="font-size:13px;color:var(--text-mute);margin-bottom:12px">
+        過去 ${index.reports.length} 日嘅完整報告
+      </p>
+      ${list}
+    </div>
+  `;
+}
+
+init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f766e">
+<title>買賣訊號 - Project X 2026</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">X</span>
+      <span>Project X 2026</span>
+    </div>
+    <div class="update-time" id="update-time">載入中…</div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-link"><span class="nav-icon">🏠</span>首頁</a>
+    <a href="signals.html" class="nav-link"><span class="nav-icon">📊</span>買賣訊號</a>
+    <a href="portfolio.html" class="nav-link"><span class="nav-icon">💼</span>模擬組合</a>
+    <a href="learn.html" class="nav-link"><span class="nav-icon">📚</span>學習中心</a>
+    <a href="reports.html" class="nav-link"><span class="nav-icon">📰</span>每日報告</a>
+  </div>
+</nav>
+
+<main>
+  <div id="content">
+    <div class="loading">載入買賣訊號…</div>
+  </div>
+</main>
+
+<footer>
+  <p>⚠️ 本網站只供學習用途，數據來自 Yahoo Finance，並非投資建議。</p>
+</footer>
+
+<script src="js/common.js"></script>
+<script>
+async function init() {
+  const daily = await loadJSON('daily_report.json');
+  if (!daily) {
+    document.getElementById('content').innerHTML = '<div class="empty">⚠️ 數據載入失敗</div>';
+    return;
+  }
+
+  setHeaderDate(daily.date);
+
+  document.getElementById('content').innerHTML = `
+    <div class="card">
+      <h2>📊 今日買賣訊號詳細分析</h2>
+      <p style="font-size:13px;color:var(--text-mute);margin-bottom:12px">
+        數據時效：${daily.date} · 市場狀態：${daily.regime}
+      </p>
+
+      ${daily.signals.map(s => {
+        const ind = s.indicators || {};
+        const cls = signalClass(s.signal);
+        const changeCls = s.change_pct > 0 ? 'up' : 'down';
+        const whyBuy = s.signal.includes('買入');
+        const whySell = s.signal.includes('小心') || s.signal.includes('賣');
+
+        return `
+          <div class="stock-card ${cls}">
+            <div class="stock-header">
+              <div>
+                <span class="stock-ticker">${s.ticker}</span>
+              </div>
+              <div>
+                <span class="stock-price">${formatUSD(s.price)}</span>
+                <span class="stock-change ${changeCls}">${formatPct(s.change_pct)}</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom:10px">
+              <span class="signal signal-${cls}">${signalText(s.signal)}</span>
+              <span style="font-size:12px;color:var(--text-mute);margin-left:8px">信心度 ${s.confidence}%</span>
+            </div>
+
+            <div class="reason-block why-${whyBuy ? 'buy' : whySell ? 'sell' : ''}">
+              <h4>${whyBuy ? '✅ 為什麼買？' : whySell ? '⚠️ 為什麼要小心？' : 'ℹ️ 為什麼觀望？'}</h4>
+              ${escapeHTML(s.reason)}
+            </div>
+
+            <h3 style="margin-top:14px">📐 技術指標</h3>
+            <div class="indicators">
+              <div class="indicator">
+                <div class="indicator-label">RSI (14)</div>
+                <div class="indicator-value">${ind.rsi14 || '—'}</div>
+                <div style="font-size:11px;color:var(--text-mute)">${rsiZone(ind.rsi14)}</div>
+              </div>
+              <div class="indicator">
+                <div class="indicator-label">股價 vs MA50</div>
+                <div class="indicator-value">${formatPct(ind.price_vs_ma50_pct)}</div>
+                <div style="font-size:11px;color:var(--text-mute)">${ind.trend || '—'} 50日線</div>
+              </div>
+              <div class="indicator">
+                <div class="indicator-label">MA50</div>
+                <div class="indicator-value">${formatUSD(ind.ma50)}</div>
+              </div>
+              <div class="indicator">
+                <div class="indicator-label">MA20</div>
+                <div class="indicator-value">${formatUSD(ind.ma20)}</div>
+                <div style="font-size:11px;color:var(--text-mute)">${formatPct(ind.price_vs_ma20_pct)} 差距</div>
+              </div>
+              <div class="indicator">
+                <div class="indicator-label">成交量比</div>
+                <div class="indicator-value">${ind.volume_ratio || '—'}x</div>
+                <div style="font-size:11px;color:var(--text-mute)">${
+                  ind.volume_ratio > 1.5 ? '明顯放大' : ind.volume_ratio < 0.7 ? '萎縮' : '正常'
+                }</div>
+              </div>
+              <div class="indicator">
+                <div class="indicator-label">建議持倉</div>
+                <div class="indicator-value">${
+                  s.signal.includes('買入') ? '0.5-1 注' :
+                  s.signal.includes('小心') ? '減倉' : '維持'
+                }</div>
+              </div>
+            </div>
+
+            <h3 style="margin-top:14px">🎯 建議價位</h3>
+            <div class="price-target">
+              <div class="target target-sl">
+                <div class="target-label">🛑 止損價（-10%）</div>
+                <div style="font-size:15px;font-weight:600;margin-top:2px">${formatUSD(s.stop_loss_suggested)}</div>
+                <div style="font-size:11px;margin-top:2px;opacity:0.8">跌穿就賣，保護本金</div>
+              </div>
+              <div class="target target-tp">
+                <div class="target-label">🎯 止盈價（+20%）</div>
+                <div style="font-size:15px;font-weight:600;margin-top:2px">${formatUSD(s.take_profit_suggested)}</div>
+                <div style="font-size:11px;margin-top:2px;opacity:0.8">到價可考慮獲利</div>
+              </div>
+            </div>
+
+            <div class="tip">
+              <span class="tip-icon">💡</span>
+              <strong>操作建議：</strong>
+              ${
+                s.signal.includes('買入') ?
+                `信號正面，但仍要設止損。即使睇好，跌 10% 就要走，唔好博。新手最常犯嘅錯就係「再等等會反彈」。` :
+                s.signal.includes('小心') ?
+                `高位時更要嚴格執行止盈，落袋為安比追高更重要。可以考慮減倉 0.25 注鎖定利潤。` :
+                `觀望也是策略，唔好為做而做。等更清晰訊號先行動，減少無謂交易成本。`
+              }
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+
+    <div class="card card-soft">
+      <h2>📖 術語速查</h2>
+      <p style="font-size:13px;color:var(--text-soft);line-height:1.7">
+        <strong>RSI</strong>：相對強弱指數，衡量近期漲跌強度。&lt;35 偏超賣，&gt;65 偏超買。<br>
+        <strong>MA50</strong>：過去 50 日平均收市價，判斷中長期趨勢。<br>
+        <strong>MA20</strong>：過去 20 日平均收市價，判斷短期趨勢。<br>
+        <strong>成交量比</strong>：當日成交量 / 過去 20 日平均。&gt;1.5 代表市場關注度急升。
+      </p>
+    </div>
+  `;
+}
+
+init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+{
+  "date": "2026-07-08 13:05 HKT",
+  "data_cutoff_note": "⚠️ 美股開盤即時數據 (21:30 HKT)，波動大請注意",
+  "vix": 16.13,
+  "spy": 747.71,
+  "fx_usdhkd": 7.8413,
+  "regime": "正常市場",
+  "signals": [
+    {
+      "ticker": "NVDA",
+      "price": 196.93,
+      "change_pct": 0.71,
+      "signal": "觀望為主",
+      "confidence": 55,
+      "reason": "RSI(43.5)中性，股價低於 MA50 (-6.0%)，無明顯超買超賣。",
+      "stop_loss_suggested": 177.24,
+      "take_profit_suggested": 236.32,
+      "indicators": {
+        "price": 196.93,
+        "ma50": 209.6,
+        "ma20": 201.92,
+        "price_vs_ma50_pct": -6.05,
+        "price_vs_ma20_pct": -2.47,
+        "rsi14": 43.5,
+        "volume_ratio": 0.83,
+        "trend": "低於",
+        "rsi_zone": "中性"
+      }
+    },
+    {
+      "ticker": "TSLA",
+      "price": 402.9,
+      "change_pct": -4.02,
+      "signal": "觀望為主",
+      "confidence": 55,
+      "reason": "RSI(49.6)中性，股價低於 MA50 (-1.2%)，無明顯超買超賣。",
+      "stop_loss_suggested": 362.61,
+      "take_profit_suggested": 483.48,
+      "indicators": {
+        "price": 402.9,
+        "ma50": 407.65,
+        "ma20": 399.82,
+        "price_vs_ma50_pct": -1.16,
+        "price_vs_ma20_pct": 0.77,
+        "rsi14": 49.6,
+        "volume_ratio": 0.77,
+        "trend": "低於",
+        "rsi_zone": "中性"
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "price": 83.41,
+      "change_pct": -10.4,
+      "signal": "觀望為主",
+      "confidence": 55,
+      "reason": "RSI(38.5)中性，股價低於 MA50 (-22.0%)，無明顯超買超賣。",
+      "stop_loss_suggested": 75.07,
+      "take_profit_suggested": 100.09,
+      "indicators": {
+        "price": 83.41,
+        "ma50": 106.97,
+        "ma20": 99.8,
+        "price_vs_ma50_pct": -22.02,
+        "price_vs_ma20_pct": -16.42,
+        "rsi14": 38.5,
+        "volume_ratio": 0.87,
+        "trend": "低於",
+        "rsi_zone": "中性"
+      }
+    }
+  ],
+  "secondary": [
+    {
+      "ticker": "AMD",
+      "price": 516.11,
+      "change_pct": -6.51
+    },
+    {
+      "ticker": "MSFT",
+      "price": 388.84,
+      "change_pct": 0.54
+    }
+  ],
+  "learning_focus": "今日學習：RSI (Wilder) + MA50 + 成交量綜合判斷 + 預設止損"
+}
