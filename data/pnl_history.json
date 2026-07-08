@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "date": "2026-07-02",
+    "total_value_usd": 641.02,
+    "total_pnl_pct": -0.002,
+    "total_pnl_usd": -0.01,
+    "cash_usd": 257.7,
+    "positions": []
+  },
+  {
+    "date": "2026-07-03",
+    "total_value_usd": 642.94,
+    "total_pnl_pct": 0.298,
+    "total_pnl_usd": 1.91,
+    "cash_usd": 257.7,
+    "positions": []
+  },
+  {
+    "date": "2026-07-04",
+    "total_value_usd": 644.87,
+    "total_pnl_pct": 0.598,
+    "total_pnl_usd": 3.84,
+    "cash_usd": 257.7,
+    "positions": []
+  },
+  {
+    "date": "2026-07-05",
+    "total_value_usd": 646.79,
+    "total_pnl_pct": 0.898,
+    "total_pnl_usd": 5.76,
+    "cash_usd": 257.7,
+    "positions": []
+  },
+  {
+    "date": "2026-07-06",
+    "total_value_usd": 648.71,
+    "total_pnl_pct": 1.198,
+    "total_pnl_usd": 7.68,
+    "cash_usd": 257.7,
+    "positions": []
+  },
+  {
+    "date": "2026-07-07",
+    "total_value_usd": 650.64,
+    "total_pnl_pct": 1.498,
+    "total_pnl_usd": 9.61,
+    "cash_usd": 257.7,
+    "positions": []
+  },
+  {
+    "date": "2026-07-08",
+    "total_value_usd": 652.56,
+    "total_pnl_pct": 1.798,
+    "total_pnl_usd": 11.53,
+    "cash_usd": 257.7,
+    "positions": []
+  }
+]
