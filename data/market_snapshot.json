@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-07-09T05:01:16.466590",
+  "vix": 16.9,
+  "fx": 7.839,
+  "quotes": {
+    "NVDA": {
+      "ticker": "NVDA",
+      "price": 204.12,
+      "prev_close": 196.93,
+      "change_pct": 3.65,
+      "volume": 145806099,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-09T05:01:16.994364"
+    },
+    "TSLA": {
+      "ticker": "TSLA",
+      "price": 394.06,
+      "prev_close": 402.9,
+      "change_pct": -2.19,
+      "volume": 33241905,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-09T05:01:17.064934"
+    },
+    "RKLB": {
+      "ticker": "RKLB",
+      "price": 83.35,
+      "prev_close": 83.41,
+      "change_pct": -0.07,
+      "volume": 19037420,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-09T05:01:17.167871"
+    },
+    "AMD": {
+      "ticker": "AMD",
+      "price": 517.41,
+      "prev_close": 516.11,
+      "change_pct": 0.25,
+      "volume": 22824431,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-09T05:01:17.305531"
+    },
+    "MSFT": {
+      "ticker": "MSFT",
+      "price": 383.34,
+      "prev_close": 388.84,
+      "change_pct": -1.41,
+      "volume": 24832517,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-09T05:01:17.403382"
+    },
+    "SPY": {
+      "ticker": "SPY",
+      "price": 745.4,
+      "prev_close": 747.71,
+      "change_pct": -0.31,
+      "volume": 42671305,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-09T05:01:17.529083"
+    }
+  }
+}
