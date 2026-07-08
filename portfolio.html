@@ -33,6 +33,13 @@
   <div id="content">
     <div class="loading">載入組合…</div>
   </div>
+  <div class="card">
+    <h2>📈 P&L 走勢圖</h2>
+    <div id="pnl-chart" class="chart-container"></div>
+    <p style="font-size:12px;color:var(--text-mute);margin-top:8px">
+      藍綠色 = 組合總值 (USD) · 綠線 = P&L 百分比
+    </p>
+  </div>
 </main>
 
 <footer>
@@ -40,6 +47,7 @@
 </footer>
 
 <script src="js/common.js"></script>
+<script src="js/pnl_chart.js"></script>
 <script>
 async function init() {
   const [portfolio, daily, history] = await Promise.all([
@@ -183,6 +191,7 @@ async function init() {
 }
 
 init();
+loadAndRenderPnlChart('pnl-chart');
 </script>
 
 </body>
