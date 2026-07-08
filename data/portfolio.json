@@ -18,7 +18,7 @@
       "current_price": 196.93,
       "pnl_pct": 0.0,
       "value_usd": 98.47,
-      "last_updated": "2026-07-08T13:05:57.682979"
+      "last_updated": "2026-07-08T17:22:02.196608"
     },
     {
       "ticker": "TSLA",
@@ -30,7 +30,7 @@
       "current_price": 402.9,
       "pnl_pct": 0.0,
       "value_usd": 201.45,
-      "last_updated": "2026-07-08T13:05:57.695201"
+      "last_updated": "2026-07-08T17:22:02.264282"
     },
     {
       "ticker": "RKLB",
@@ -42,7 +42,7 @@
       "current_price": 83.41,
       "pnl_pct": 0.0,
       "value_usd": 83.41,
-      "last_updated": "2026-07-08T13:05:57.706624"
+      "last_updated": "2026-07-08T17:22:02.339528"
     }
   ],
   "cash_usd": 257.7,
@@ -63,5 +63,5 @@
   "total_value_usd": 641.02,
   "total_pnl_usd": -0.0,
   "total_pnl_pct": -0.0,
-  "last_updated": "2026-07-08T13:05:57.706631"
+  "last_updated": "2026-07-08T17:22:02.339547"
 }
