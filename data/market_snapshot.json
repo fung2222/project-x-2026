@@ -1,67 +1,27 @@
 {
-  "timestamp": "2026-07-10T05:00:21.948351",
+  "timestamp": "2026-07-10T08:30:24.374160",
   "vix": 15.84,
-  "fx": 7.8359,
-  "quotes": {
-    "NVDA": {
-      "ticker": "NVDA",
-      "price": 202.78,
-      "prev_close": 204.12,
-      "change_pct": -0.66,
-      "volume": 130728739,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-10T05:00:22.445961"
-    },
-    "TSLA": {
-      "ticker": "TSLA",
-      "price": 406.55,
-      "prev_close": 394.06,
-      "change_pct": 3.17,
-      "volume": 36519720,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-10T05:00:22.509264"
-    },
-    "RKLB": {
-      "ticker": "RKLB",
-      "price": 82.55,
-      "prev_close": 83.35,
-      "change_pct": -0.96,
-      "volume": 17167920,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-10T05:00:22.577270"
-    },
-    "AMD": {
-      "ticker": "AMD",
-      "price": 546.72,
-      "prev_close": 517.41,
-      "change_pct": 5.66,
-      "volume": 26670194,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-10T05:00:22.645322"
-    },
-    "MSFT": {
-      "ticker": "MSFT",
-      "price": 384.36,
-      "prev_close": 383.34,
-      "change_pct": 0.27,
-      "volume": 30353251,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-10T05:00:22.751878"
-    },
+  "fx": 7.8372,
+  "premarket": {
     "SPY": {
-      "ticker": "SPY",
       "price": 751.71,
       "prev_close": 745.4,
-      "change_pct": 0.85,
-      "volume": 39314965,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-10T05:00:22.863474"
+      "change_pct": 0.85
+    },
+    "NVDA": {
+      "price": 202.78,
+      "prev_close": 204.12,
+      "change_pct": -0.66
+    },
+    "TSLA": {
+      "price": 406.55,
+      "prev_close": 394.06,
+      "change_pct": 3.17
+    },
+    "RKLB": {
+      "price": 82.55,
+      "prev_close": 83.35,
+      "change_pct": -0.96
     }
   }
 }
