@@ -13,7 +13,7 @@
   const banner = document.createElement('div');
   banner.className = 'pwa-install-banner';
   banner.innerHTML = `
-    <img src="img/icon-192.png" class="pwa-install-icon" alt="PX">
+    <img src="img/icon-32.png" class="pwa-install-icon" alt="PX">
     <div class="pwa-install-text">
       <strong>安裝 Project X App</strong>
       <small>加入主畫面，離線使用，每日自動更新</small>

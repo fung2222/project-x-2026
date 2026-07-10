@@ -2,17 +2,19 @@
 .pwa-install-banner {
   position: fixed;
   bottom: 20px;
-  left: 16px;
-  right: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 480px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
-  padding: 14px 16px;
+  padding: 12px 14px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
   z-index: 1000;
   display: none;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   font-size: 14px;
   animation: slideUp 0.3s ease-out;
 }
@@ -22,15 +24,15 @@
 }
 
 @keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from { transform: translate(-50%, 20px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
 }
 
 .pwa-install-icon {
-  width: 44px;
-  height: 44px;
+  width: 28px;
+  height: 28px;
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .pwa-install-text {
@@ -78,8 +80,6 @@
 
 @media (min-width: 600px) {
   .pwa-install-banner {
-    left: auto;
-    right: 20px;
-    max-width: 380px;
+    width: 420px;
   }
 }
