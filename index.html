@@ -52,16 +52,16 @@
   </div>
 </main>
 
-<!-- PWA Install Banner (static HTML, JS controls show/hide) -->
+<!-- PWA Install Banner (vertical layout: icon top, button middle, text bottom) -->
 <div id="pwa-install-banner" class="pwa-banner hidden" role="dialog" aria-label="安裝 Project X App">
-  <div class="pwa-banner-icon" aria-hidden="true" style="width:36px;height:36px;flex-shrink:0;border-radius:8px;background:#ffffff;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;font-family:Arial Black,Arial,sans-serif;font-weight:900;font-size:14px;color:#000000;line-height:1;">PX</div>
-  <div class="pwa-banner-text">
-    <strong>安裝 Project X App</strong>
-    <small>加入主畫面，每日自動更新</small>
+  <div class="pwa-banner-icon" aria-hidden="true" style="width:56px;height:56px;flex-shrink:0;border-radius:14px;background:#ffffff;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;font-family:Arial Black,Arial,sans-serif;font-weight:900;font-size:22px;color:#000000;line-height:1;margin-bottom:12px;box-shadow:0 2px 6px rgba(0,0,0,0.06);">PX</div>
+  <div class="pwa-banner-text" style="margin-bottom:14px;line-height:1.4;">
+    <strong style="display:block;font-size:15px;color:#1a202c;font-weight:700;margin-bottom:4px;">安裝 Project X App</strong>
+    <small style="font-size:12px;color:#718096;line-height:1.5;display:block;">加入主畫面，每日自動更新，離線使用</small>
   </div>
-  <div class="pwa-banner-actions">
-    <button type="button" class="pwa-banner-btn pwa-banner-btn-primary" id="pwa-install-btn">安裝</button>
-    <button type="button" class="pwa-banner-btn pwa-banner-btn-secondary" id="pwa-dismiss-btn" aria-label="關閉">✕</button>
+  <div class="pwa-banner-actions" style="display:flex;gap:8px;width:100%;">
+    <button type="button" class="pwa-banner-btn pwa-banner-btn-primary" id="pwa-install-btn" style="border:none;padding:10px 16px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;flex:1;background:#000000;color:#ffffff;">安裝</button>
+    <button type="button" class="pwa-banner-btn pwa-banner-btn-secondary" id="pwa-dismiss-btn" aria-label="關閉" style="border:none;padding:10px 12px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;background:#f1f4f8;color:#4a5568;flex:0 0 auto;">✕</button>
   </div>
 </div>
 
