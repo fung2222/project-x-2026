@@ -88,5 +88,18 @@ async function loadAndRenderPnlChart(containerId) {
     document.getElementById(containerId).innerHTML = '<div class="empty">📊 暫無歷史數據（明日收市後開始累積）</div>';
     return;
   }
+
+  // Wait for library to load (max 5 sec)
+  let waited = 0;
+  while (typeof LightweightCharts === 'undefined' && waited < 5000) {
+    await new Promise(r => setTimeout(r, 100));
+    waited += 100;
+  }
+
+  if (typeof LightweightCharts === 'undefined') {
+    document.getElementById(containerId).innerHTML = '<div class="empty">⚠️ 圖表 library 載入失敗（網絡問題）。請 reload 試下。</div>';
+    return;
+  }
+
   renderPnlChart(containerId, data);
 }
