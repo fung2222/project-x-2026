@@ -101,7 +101,7 @@ async function init() {
   const oneLiners = daily.signals.map(s => {
     const cls = signalClass(s.signal);
     const arrow = s.change_pct > 0 ? '▲' : s.change_pct < 0 ? '▼' : '━';
-    return `<div style="font-size:15px;line-height:1.7;margin:2px 0"><strong style="color:#0f766e">${s.ticker}</strong> ${arrow}${formatPct(s.change_pct)} <span class="signal signal-${cls}">${signalText(s.signal)}</span></div>`;
+    return `<div style="font-size:15px;line-height:1.7;margin:2px 0;color:#ffffff"><strong style="color:#ffffff">${s.ticker}</strong> ${arrow}${formatPct(s.change_pct)} <span class="signal signal-${cls}">${signalText(s.signal)}</span></div>`;
   }).join('');
 
   const posList = (portfolio.positions || []).map(p => {
