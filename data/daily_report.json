@@ -1,9 +1,9 @@
 {
-  "date": "2026-07-10 05:00 HKT",
+  "date": "2026-07-10 17:46 HKT",
   "data_cutoff_note": "⚠️ 美股開盤即時數據 (21:30 HKT)，波動大請注意",
-  "vix": 15.84,
+  "vix": 16.0,
   "spy": 751.71,
-  "fx_usdhkd": 7.8353,
+  "fx_usdhkd": 7.8386,
   "regime": "正常市場",
   "signals": [
     {
@@ -43,7 +43,7 @@
         "price_vs_ma50_pct": -0.49,
         "price_vs_ma20_pct": 1.75,
         "rsi14": 50.9,
-        "volume_ratio": 0.77,
+        "volume_ratio": 0.8,
         "trend": "低於",
         "rsi_zone": "中性"
       }
@@ -64,7 +64,7 @@
         "price_vs_ma50_pct": -22.88,
         "price_vs_ma20_pct": -14.9,
         "rsi14": 38.1,
-        "volume_ratio": 0.57,
+        "volume_ratio": 0.59,
         "trend": "低於",
         "rsi_zone": "中性"
       }
