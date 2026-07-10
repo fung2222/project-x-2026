@@ -1,26 +1,24 @@
-/* PWA Install Banner */
-.pwa-install-banner {
+/* PWA Install Banner - simple inline version */
+.pwa-banner {
   position: fixed;
-  bottom: 20px;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 32px);
-  max-width: 480px;
+  max-width: 460px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 12px 14px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
   z-index: 1000;
-  display: none;
+  display: flex;
   align-items: center;
   gap: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang HK", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
   font-size: 14px;
+  color: #1a202c;
   animation: slideUp 0.3s ease-out;
-}
-
-.pwa-install-banner.show {
-  display: flex;
 }
 
 @keyframes slideUp {
@@ -28,59 +26,82 @@
   to { transform: translate(-50%, 0); opacity: 1; }
 }
 
-.pwa-install-icon {
-  width: 28px;
-  height: 28px;
+.pwa-banner-icon {
+  width: 36px;
+  height: 36px;
   flex-shrink: 0;
-  border-radius: 6px;
-  display: block;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial Black, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  color: #000000;
 }
 
-.pwa-install-text {
+.pwa-banner-text {
   flex: 1;
-  line-height: 1.4;
+  min-width: 0;
+  line-height: 1.3;
 }
 
-.pwa-install-text strong {
+.pwa-banner-text strong {
   display: block;
   font-size: 14px;
   color: #1a202c;
+  font-weight: 600;
   margin-bottom: 2px;
 }
 
-.pwa-install-text small {
+.pwa-banner-text small {
   font-size: 12px;
   color: #718096;
 }
 
-.pwa-install-actions {
+.pwa-banner-actions {
   display: flex;
   gap: 6px;
   flex-shrink: 0;
 }
 
-.pwa-btn {
+.pwa-banner-btn {
   border: none;
-  padding: 8px 14px;
-  border-radius: 8px;
+  padding: 7px 12px;
+  border-radius: 7px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
 }
 
-.pwa-btn-primary {
+.pwa-banner-btn-primary {
   background: #000000;
   color: #ffffff;
 }
 
-.pwa-btn-secondary {
+.pwa-banner-btn-primary:hover {
+  background: #1a1a1a;
+}
+
+.pwa-banner-btn-secondary {
   background: transparent;
   color: #718096;
+  padding: 7px 8px;
+}
+
+.pwa-banner-btn-secondary:hover {
+  color: #1a202c;
+}
+
+.pwa-banner.hidden {
+  display: none;
 }
 
 @media (min-width: 600px) {
-  .pwa-install-banner {
-    width: 420px;
+  .pwa-banner {
+    width: 440px;
   }
 }
