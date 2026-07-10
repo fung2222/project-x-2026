@@ -13,7 +13,7 @@
   const banner = document.createElement('div');
   banner.className = 'pwa-install-banner';
   banner.innerHTML = `
-    <svg class="pwa-install-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <svg style="width:28px;height:28px;display:block;flex-shrink:0;border-radius:6px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
       <rect x="0" y="0" width="32" height="32" rx="7" ry="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="0.4"/>
       <text x="16" y="16" text-anchor="middle" dominant-baseline="central" font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" font-size="18" fill="#000000">PX</text>
     </svg>
