@@ -5,6 +5,16 @@
   const banner = document.getElementById('pwa-install-banner');
   if (!banner) return;
 
+  // Wait for CSS to load before showing (avoid flash of unstyled content)
+  function whenCSSReady(callback) {
+    if (document.readyState === 'complete') {
+      // Give CSS a moment to apply
+      setTimeout(callback, 50);
+    } else {
+      window.addEventListener('load', () => setTimeout(callback, 50));
+    }
+  }
+
   const installBtn = document.getElementById('pwa-install-btn');
   const DISMISS_KEY = 'px-pwa-dismissed-' + new Date().toISOString().slice(0, 10);
 
@@ -20,10 +30,12 @@
     return;
   }
 
-  // Show banner after 2 seconds
-  setTimeout(() => {
-    banner.classList.remove('hidden');
-  }, 2000);
+  // Show banner after CSS is ready + 2 seconds
+  whenCSSReady(() => {
+    setTimeout(() => {
+      banner.classList.remove('hidden');
+    }, 2000);
+  });
 
   // No dismiss button in this version — install prompt stays until user installs
   // (User can scroll past it; banner doesn't block content)
