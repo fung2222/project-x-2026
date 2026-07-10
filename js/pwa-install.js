@@ -6,7 +6,6 @@
   if (!banner) return;
 
   const installBtn = document.getElementById('pwa-install-btn');
-  const dismissBtn = document.getElementById('pwa-dismiss-btn');
   const DISMISS_KEY = 'px-pwa-dismissed-' + new Date().toISOString().slice(0, 10);
 
   // Skip if installed (PWA standalone mode)
@@ -26,13 +25,8 @@
     banner.classList.remove('hidden');
   }, 2000);
 
-  // Dismiss button
-  if (dismissBtn) {
-    dismissBtn.addEventListener('click', () => {
-      banner.classList.add('hidden');
-      localStorage.setItem(DISMISS_KEY, '1');
-    });
-  }
+  // No dismiss button in this version — install prompt stays until user installs
+  // (User can scroll past it; banner doesn't block content)
 
   // Install button
   if (installBtn) {

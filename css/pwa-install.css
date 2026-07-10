@@ -1,23 +1,22 @@
-/* PWA Install Banner - vertical layout (icon top, button middle, text bottom) */
+/* PWA Install Banner - simple clean design */
 .pwa-banner {
   position: fixed;
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 24px);
-  max-width: 320px;
+  max-width: 280px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  padding: 18px 16px 16px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  padding: 16px 14px 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "PingFang HK", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
-  font-size: 14px;
   color: #1a202c;
   animation: slideUp 0.3s ease-out;
 }
@@ -28,10 +27,10 @@
 }
 
 .pwa-banner-icon {
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
-  border-radius: 14px;
+  border-radius: 10px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   display: flex;
@@ -39,24 +38,24 @@
   justify-content: center;
   font-family: Arial Black, Arial, sans-serif;
   font-weight: 900;
-  font-size: 22px;
+  font-size: 18px;
   color: #000000;
   line-height: 1;
-  margin-bottom: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .pwa-banner-text {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   line-height: 1.4;
 }
 
 .pwa-banner-text strong {
   display: block;
-  font-size: 15px;
+  font-size: 14px;
   color: #1a202c;
-  font-weight: 700;
-  margin-bottom: 4px;
+  font-weight: 600;
+  margin-bottom: 2px;
 }
 
 .pwa-banner-text small {
@@ -67,10 +66,7 @@
 }
 
 .pwa-banner-actions {
-  display: flex;
-  gap: 8px;
   width: 100%;
-  position: relative;
 }
 
 .pwa-banner-btn {
@@ -81,35 +77,16 @@
   font-weight: 600;
   cursor: pointer;
   font-family: inherit;
-  flex: 1;
-}
-
-.pwa-banner-btn-primary {
   background: #000000;
   color: #ffffff;
+  width: 100%;
+  display: block;
 }
 
-.pwa-banner-btn-primary:hover {
+.pwa-banner-btn:hover {
   background: #1a1a1a;
-}
-
-.pwa-banner-btn-secondary {
-  background: #f1f4f8;
-  color: #4a5568;
-  flex: 0 0 auto;
-  padding: 10px 12px;
-}
-
-.pwa-banner-btn-secondary:hover {
-  background: #e2e8f0;
 }
 
 .pwa-banner.hidden {
   display: none;
-}
-
-@media (min-width: 600px) {
-  .pwa-banner {
-    width: 360px;
-  }
 }
