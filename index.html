@@ -4,23 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffffff">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Project X">
-<meta name="mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
 <link rel="icon" type="image/svg+xml" href="img/icon-32.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="img/icon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
-<link rel="apple-touch-icon" href="img/icon-180.png">
-<link rel="apple-touch-icon" sizes="180x180" href="img/icon-180.png">
-<link rel="apple-touch-icon" sizes="152x152" href="img/icon-128.png">
-<link rel="manifest" href="manifest.json">
 
 <title>Project X 2026 - 個人投資中心</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/pwa-install.css">
 </head>
 <body>
 
@@ -53,25 +43,12 @@
   </div>
 </main>
 
-<!-- PWA Install Banner (vertical layout: icon top, button middle, text bottom) -->
-<div id="pwa-install-banner" class="pwa-banner hidden" role="dialog" aria-label="安裝 Project X App">
-  <div class="pwa-banner-icon" aria-hidden="true" style="width:44px;height:44px;flex-shrink:0;border-radius:10px;background:#ffffff;border:1px solid #e2e8f0;display:flex;align-items:center;justify-content:center;font-family:Arial Black,Arial,sans-serif;font-weight:900;font-size:18px;color:#000000;line-height:1;margin-bottom:10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);">PX</div>
-  <div class="pwa-banner-text" style="margin-bottom:12px;line-height:1.4;">
-    <strong style="display:block;font-size:14px;color:#1a202c;font-weight:600;margin-bottom:2px;">安裝 Project X App</strong>
-    <small style="font-size:12px;color:#718096;line-height:1.5;display:block;">加入主畫面，每日更新</small>
-  </div>
-  <div class="pwa-banner-actions" style="width:100%;">
-    <button type="button" class="pwa-banner-btn" id="pwa-install-btn" style="border:none;padding:10px 16px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;background:#000000;color:#ffffff;width:100%;display:block;">安裝</button>
-  </div>
-</div>
-
 <footer>
   <p>⚠️ 本網站只供學習用途，所有數據來自 Yahoo Finance，僅作模擬練習，並非投資建議。</p>
   <p>📊 Project X 2026 · 個人投資學習中心</p>
 </footer>
 
 <script src="js/common.js"></script>
-<script src="js/pwa-install.js"></script>
 <script>
 async function init() {
   const [daily, portfolio] = await Promise.all([
