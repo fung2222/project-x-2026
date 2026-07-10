@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<title>Project X 2026 Icon Generator</title>
+<style>
+body { font-family: -apple-system, sans-serif; padding: 20px; background: #f8f9fa; }
+.row { display: flex; gap: 20px; align-items: flex-end; margin-bottom: 20px; flex-wrap: wrap; }
+.box { text-align: center; }
+.box label { display: block; font-size: 11px; margin-top: 6px; color: #4a5568; }
+canvas { display: block; border: 1px solid #e2e8f0; border-radius: 4px; }
+.big { display: block; margin: 20px 0; }
+</style>
+</head>
+<body>
+
+<h2>Project X 2026 Icon Generator</h2>
+<p>白底黑字 PX - 多個 size 預覽</p>
+
+<div class="row" id="icons"></div>
+
+<h3>SVG Source (download)</h3>
+<textarea id="svg-source" style="width:100%;height:200px;font-family:monospace"></textarea>
+
+<script>
+function generateIcon(size) {
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+
+  // White rounded square background
+  const radius = size * 0.22;
+  ctx.fillStyle = '#ffffff';
+  ctx.beginPath();
+  ctx.moveTo(radius, 0);
+  ctx.lineTo(size - radius, 0);
+  ctx.quadraticCurveTo(size, 0, size, radius);
+  ctx.lineTo(size, size - radius);
+  ctx.quadraticCurveTo(size, size, size - radius, size);
+  ctx.lineTo(radius, size);
+  ctx.quadraticCurveTo(0, size, 0, size - radius);
+  ctx.lineTo(0, radius);
+  ctx.quadraticCurveTo(0, 0, radius, 0);
+  ctx.closePath();
+  ctx.fill();
+
+  // Black border (subtle)
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.lineWidth = Math.max(1, size * 0.01);
+  ctx.stroke();
+
+  // "PX" text in black, bold
+  ctx.fillStyle = '#000000';
+  const fontSize = size * 0.55;
+  ctx.font = `900 ${fontSize}px -apple-system, "Helvetica Neue", Arial, sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('PX', size / 2, size / 2 + size * 0.03);
+
+  return canvas;
+}
+
+function generateSVG(size) {
+  const fontSize = size * 0.55;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+  <rect x="0" y="0" width="${size}" height="${size}" rx="${size * 0.22}" ry="${size * 0.22}" fill="#ffffff" stroke="#e2e8f0" stroke-width="${Math.max(1, size * 0.01)}"/>
+  <text x="${size / 2}" y="${size / 2 + fontSize * 0.05}" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="${fontSize}" fill="#000000">PX</text>
+</svg>`;
+}
+
+const sizes = [16, 32, 48, 64, 96, 128, 180, 192, 256, 512];
+const container = document.getElementById('icons');
+
+sizes.forEach(size => {
+  const canvas = generateIcon(size);
+  const box = document.createElement('div');
+  box.className = 'box';
+
+  const label = document.createElement('label');
+  label.textContent = `${size}x${size}`;
+  box.appendChild(canvas);
+  box.appendChild(label);
+  container.appendChild(box);
+});
+
+// Show SVG source for 512
+document.getElementById('svg-source').value = generateSVG(512);
+</script>
+
+</body>
+</html>
