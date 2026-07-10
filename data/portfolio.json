@@ -15,10 +15,10 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 98.47,
       "rationale": "AI 晶片龍頭，平均分第一注，建立基本倉位觀察",
-      "current_price": 202.78,
-      "pnl_pct": 2.97,
-      "value_usd": 101.39,
-      "last_updated": "2026-07-10T17:46:05.046685"
+      "current_price": 203.21,
+      "pnl_pct": 3.19,
+      "value_usd": 101.61,
+      "last_updated": "2026-07-10T21:30:32.567792"
     },
     {
       "ticker": "TSLA",
@@ -27,10 +27,10 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 201.45,
       "rationale": "平均分第一注，學習情緒對股價影響",
-      "current_price": 406.55,
-      "pnl_pct": 0.91,
-      "value_usd": 203.28,
-      "last_updated": "2026-07-10T17:46:05.118068"
+      "current_price": 410.13,
+      "pnl_pct": 1.79,
+      "value_usd": 205.06,
+      "last_updated": "2026-07-10T21:30:32.630011"
     },
     {
       "ticker": "RKLB",
@@ -39,10 +39,10 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 83.41,
       "rationale": "平均分第一注，高波動股適合學止損",
-      "current_price": 82.55,
-      "pnl_pct": -1.03,
-      "value_usd": 82.55,
-      "last_updated": "2026-07-10T17:46:05.186196"
+      "current_price": 81.37,
+      "pnl_pct": -2.45,
+      "value_usd": 81.37,
+      "last_updated": "2026-07-10T21:30:32.707355"
     }
   ],
   "cash_usd": 257.7,
@@ -60,8 +60,8 @@
       "details": "平均分 0.5/0.5/1.0 注，留 47% 現金等信號"
     }
   ],
-  "total_value_usd": 644.91,
-  "total_pnl_usd": 3.88,
-  "total_pnl_pct": 0.61,
-  "last_updated": "2026-07-10T17:46:05.186209"
+  "total_value_usd": 645.74,
+  "total_pnl_usd": 4.71,
+  "total_pnl_pct": 0.73,
+  "last_updated": "2026-07-10T21:30:32.707367"
 }
