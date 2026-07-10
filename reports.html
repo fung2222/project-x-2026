@@ -72,7 +72,7 @@ async function init() {
           ${r.pnl != null ? `· P&L: <span style="color:${r.pnl >= 0 ? 'var(--buy)' : 'var(--sell)'}">${formatPct(r.pnl)}</span>` : ''}
         </div>
       </div>
-      <a href="reports/${r.file}" class="badge" style="cursor:pointer">查看 →</a>
+      <a href="data/${r.file}" class="badge" style="cursor:pointer">查看 →</a>
     </div>
   `).join('');
 
