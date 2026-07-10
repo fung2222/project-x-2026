@@ -101,8 +101,8 @@ async function init() {
   const oneLiners = daily.signals.map(s => {
     const cls = signalClass(s.signal);
     const arrow = s.change_pct > 0 ? '▲' : s.change_pct < 0 ? '▼' : '━';
-    return `<strong>${s.ticker}</strong> ${arrow}${formatPct(s.change_pct)} <span class="signal signal-${cls}">${signalText(s.signal)}</span>`;
-  }).join('　·　');
+    return `<div style="font-size:15px;line-height:1.7;margin:2px 0"><strong style="color:#0f766e">${s.ticker}</strong> ${arrow}${formatPct(s.change_pct)} <span class="signal signal-${cls}">${signalText(s.signal)}</span></div>`;
+  }).join('');
 
   const posList = (portfolio.positions || []).map(p => {
     const pnl = p.pnl_pct || 0;
@@ -119,7 +119,7 @@ async function init() {
   document.getElementById('content').innerHTML = `
     <div class="card" style="background:linear-gradient(135deg,#0f766e 0%,#134e4a 100%);color:white;border:none">
       <h2 style="color:white">📌 今日一句總結</h2>
-      <p style="font-size:16px;line-height:1.6">${oneLiners}</p>
+      <p style="font-size:16px;line-height:1.6;margin:0">${oneLiners}</p>
       <p style="font-size:13px;margin-top:8px;opacity:0.85">${daily.learning_focus || ''}</p>
     </div>
 
