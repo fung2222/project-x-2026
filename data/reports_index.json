@@ -11,6 +11,12 @@
       "file": "daily_report_2026-07-10.html",
       "summary": "開盤報告 · 總值 $645.74 (+0.73%) · VIX 15.74",
       "pnl": 0.73
+    },
+    {
+      "date": "2026-07-13",
+      "file": "close_report_2026-07-13.html",
+      "summary": "Close Report - Total $648.10 (+1.10%) - VIX 15.03",
+      "pnl": 1.1
     }
   ]
 }
