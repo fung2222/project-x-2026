@@ -1,67 +1,27 @@
 {
-  "timestamp": "2026-07-13T05:00:27.004519",
+  "timestamp": "2026-07-13T08:30:28.726781",
   "vix": 15.03,
   "fx": 7.8391,
-  "quotes": {
-    "NVDA": {
-      "ticker": "NVDA",
-      "price": 210.96,
-      "prev_close": 202.78,
-      "change_pct": 4.03,
-      "volume": 148124000,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-13T05:00:27.815351"
-    },
-    "TSLA": {
-      "ticker": "TSLA",
-      "price": 407.76,
-      "prev_close": 406.55,
-      "change_pct": 0.3,
-      "volume": 33342700,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-13T05:00:27.882037"
-    },
-    "RKLB": {
-      "ticker": "RKLB",
-      "price": 81.04,
-      "prev_close": 82.55,
-      "change_pct": -1.83,
-      "volume": 14512800,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-13T05:00:27.954423"
-    },
-    "AMD": {
-      "ticker": "AMD",
-      "price": 557.89,
-      "prev_close": 546.72,
-      "change_pct": 2.04,
-      "volume": 20654300,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-13T05:00:28.024977"
-    },
-    "MSFT": {
-      "ticker": "MSFT",
-      "price": 385.1,
-      "prev_close": 384.36,
-      "change_pct": 0.19,
-      "volume": 24612200,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-13T05:00:28.121304"
-    },
+  "premarket": {
     "SPY": {
-      "ticker": "SPY",
       "price": 754.95,
       "prev_close": 751.71,
-      "change_pct": 0.43,
-      "volume": 42114300,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-13T05:00:28.226989"
+      "change_pct": 0.43
+    },
+    "NVDA": {
+      "price": 210.96,
+      "prev_close": 202.78,
+      "change_pct": 4.03
+    },
+    "TSLA": {
+      "price": 407.76,
+      "prev_close": 406.55,
+      "change_pct": 0.3
+    },
+    "RKLB": {
+      "price": 81.04,
+      "prev_close": 82.55,
+      "change_pct": -1.83
     }
   }
 }
