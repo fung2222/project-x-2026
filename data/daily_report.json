@@ -1,85 +1,85 @@
 {
-  "date": "2026-07-13 21:31 HKT",
+  "date": "2026-07-14 05:00 HKT",
   "data_cutoff_note": "⚠️ 美股開盤即時數據 (21:30 HKT)，波動大請注意",
-  "vix": 15.03,
-  "spy": 753.44,
-  "fx_usdhkd": 7.837,
+  "vix": 17.16,
+  "spy": 749.17,
+  "fx_usdhkd": 7.8372,
   "regime": "正常市場",
   "signals": [
     {
       "ticker": "NVDA",
-      "price": 209.26,
-      "change_pct": -0.81,
+      "price": 203.53,
+      "change_pct": -3.52,
       "signal": "觀望為主",
       "confidence": 55,
-      "reason": "RSI(55.2)中性，股價高於 MA50 (+0.1%)，無明顯超買超賣。",
-      "stop_loss_suggested": 188.33,
-      "take_profit_suggested": 251.11,
+      "reason": "RSI(49.9)中性，股價低於 MA50 (-2.6%)，無明顯超買超賣。",
+      "stop_loss_suggested": 183.18,
+      "take_profit_suggested": 244.24,
       "indicators": {
-        "price": 209.26,
-        "ma50": 209.08,
-        "ma20": 202.17,
-        "price_vs_ma50_pct": 0.09,
-        "price_vs_ma20_pct": 3.51,
-        "rsi14": 55.2,
-        "volume_ratio": 0.04,
-        "trend": "高於",
+        "price": 203.53,
+        "ma50": 208.96,
+        "ma20": 201.88,
+        "price_vs_ma50_pct": -2.6,
+        "price_vs_ma20_pct": 0.82,
+        "rsi14": 49.9,
+        "volume_ratio": 0.78,
+        "trend": "低於",
         "rsi_zone": "中性"
       }
     },
     {
       "ticker": "TSLA",
-      "price": 400.15,
-      "change_pct": -1.87,
+      "price": 394.76,
+      "change_pct": -3.19,
       "signal": "觀望為主",
       "confidence": 55,
-      "reason": "RSI(48.8)中性，股價低於 MA50 (-2.3%)，無明顯超買超賣。",
-      "stop_loss_suggested": 360.13,
-      "take_profit_suggested": 480.18,
+      "reason": "RSI(47.2)中性，股價低於 MA50 (-3.6%)，無明顯超買超賣。",
+      "stop_loss_suggested": 355.28,
+      "take_profit_suggested": 473.71,
       "indicators": {
-        "price": 400.19,
-        "ma50": 409.74,
-        "ma20": 400.93,
-        "price_vs_ma50_pct": -2.33,
-        "price_vs_ma20_pct": -0.18,
-        "rsi14": 48.8,
-        "volume_ratio": 0.03,
+        "price": 394.76,
+        "ma50": 409.64,
+        "ma20": 400.66,
+        "price_vs_ma50_pct": -3.63,
+        "price_vs_ma20_pct": -1.47,
+        "rsi14": 47.2,
+        "volume_ratio": 0.71,
         "trend": "低於",
         "rsi_zone": "中性"
       }
     },
     {
       "ticker": "RKLB",
-      "price": 79.11,
-      "change_pct": -2.38,
+      "price": 76.73,
+      "change_pct": -5.32,
       "signal": "觀望為主",
       "confidence": 55,
-      "reason": "RSI(36.2)中性，股價低於 MA50 (-26.2%)，無明顯超買超賣。",
-      "stop_loss_suggested": 71.2,
-      "take_profit_suggested": 94.93,
+      "reason": "RSI(35.0)中性，股價低於 MA50 (-28.4%)，無明顯超買超賣。",
+      "stop_loss_suggested": 69.06,
+      "take_profit_suggested": 92.08,
       "indicators": {
-        "price": 79.1,
-        "ma50": 107.14,
-        "ma20": 94.01,
-        "price_vs_ma50_pct": -26.17,
-        "price_vs_ma20_pct": -15.86,
-        "rsi14": 36.2,
-        "volume_ratio": 0.05,
+        "price": 76.73,
+        "ma50": 107.09,
+        "ma20": 93.9,
+        "price_vs_ma50_pct": -28.35,
+        "price_vs_ma20_pct": -18.28,
+        "rsi14": 35.0,
+        "volume_ratio": 0.63,
         "trend": "低於",
-        "rsi_zone": "中性"
+        "rsi_zone": "超賣 (<35)"
       }
     }
   ],
   "secondary": [
     {
       "ticker": "AMD",
-      "price": 535.5,
-      "change_pct": -4.01
+      "price": 534.39,
+      "change_pct": -4.21
     },
     {
       "ticker": "MSFT",
-      "price": 389.48,
-      "change_pct": 1.14
+      "price": 390.99,
+      "change_pct": 1.53
     }
   ],
   "learning_focus": "今日學習：RSI (Wilder) + MA50 + 成交量綜合判斷 + 預設止損"
