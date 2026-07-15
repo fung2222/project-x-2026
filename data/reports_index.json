@@ -29,6 +29,12 @@
       "file": "daily_report_2026-07-15.html",
       "summary": "Open report - Total $644.77 (+0.58%) - VIX 17.16",
       "pnl": 0.58
+    },
+    {
+      "date": "2026-07-16",
+      "file": "close_report_2026-07-16.html",
+      "summary": "收市報告 · 總值 \\$637.38 (-0.57%) · VIX 15.67",
+      "pnl": 0
     }
   ]
 }
