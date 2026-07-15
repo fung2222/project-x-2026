@@ -1,27 +1,67 @@
 {
-  "timestamp": "2026-07-15T08:30:48.432996",
-  "vix": 16.5,
-  "fx": 7.8376,
-  "premarket": {
-    "SPY": {
-      "price": 751.83,
-      "prev_close": 749.17,
-      "change_pct": 0.36
-    },
+  "timestamp": "2026-07-16T06:02:00.713322",
+  "vix": 15.67,
+  "fx": 7.8381,
+  "quotes": {
     "NVDA": {
-      "price": 211.8,
-      "prev_close": 203.53,
-      "change_pct": 4.06
+      "ticker": "NVDA",
+      "price": 212.5,
+      "prev_close": 211.8,
+      "change_pct": 0.33,
+      "volume": 118979465,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-16T06:02:01.227057"
     },
     "TSLA": {
-      "price": 396.18,
-      "prev_close": 394.76,
-      "change_pct": 0.36
+      "ticker": "TSLA",
+      "price": 394.46,
+      "prev_close": 396.18,
+      "change_pct": -0.43,
+      "volume": 31393664,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-16T06:02:01.297877"
     },
     "RKLB": {
-      "price": 78.81,
-      "prev_close": 76.73,
-      "change_pct": 2.71
+      "ticker": "RKLB",
+      "price": 76.2,
+      "prev_close": 78.81,
+      "change_pct": -3.31,
+      "volume": 14892274,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-16T06:02:01.365795"
+    },
+    "AMD": {
+      "ticker": "AMD",
+      "price": 529.14,
+      "prev_close": 548.13,
+      "change_pct": -3.46,
+      "volume": 27727468,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-16T06:02:01.427560"
+    },
+    "MSFT": {
+      "ticker": "MSFT",
+      "price": 395.63,
+      "prev_close": 384.93,
+      "change_pct": 2.78,
+      "volume": 32663427,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-16T06:02:01.517642"
+    },
+    "SPY": {
+      "ticker": "SPY",
+      "price": 754.81,
+      "prev_close": 751.83,
+      "change_pct": 0.4,
+      "volume": 36741829,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-16T06:02:01.637831"
     }
   }
 }
