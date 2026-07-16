@@ -1,9 +1,9 @@
 {
-  "date": "2026-07-16 06:01 HKT",
+  "date": "2026-07-16 08:07 HKT",
   "data_cutoff_note": "⚠️ 美股開盤即時數據 (21:30 HKT)，波動大請注意",
   "vix": 15.67,
   "spy": 754.81,
-  "fx_usdhkd": 7.8381,
+  "fx_usdhkd": 7.838,
   "regime": "正常市場",
   "signals": [
     {
