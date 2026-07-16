@@ -18,7 +18,12 @@
       "current_price": 212.5,
       "pnl_pct": 7.91,
       "value_usd": 106.25,
-      "last_updated": "2026-07-16T08:07:37.237702"
+      "last_updated": "2026-07-16T08:31:57.177750",
+      "stop_loss": 177.24,
+      "take_profit": 236.32,
+      "dist_to_sl_pp": 17.91,
+      "dist_to_tp_pp": 12.09,
+      "risk_flag": "OK"
     },
     {
       "ticker": "TSLA",
@@ -30,7 +35,12 @@
       "current_price": 394.46,
       "pnl_pct": -2.09,
       "value_usd": 197.23,
-      "last_updated": "2026-07-16T08:07:37.312218"
+      "last_updated": "2026-07-16T08:31:57.244201",
+      "stop_loss": 362.61,
+      "take_profit": 483.48,
+      "dist_to_sl_pp": 7.91,
+      "dist_to_tp_pp": 22.09,
+      "risk_flag": "OK"
     },
     {
       "ticker": "RKLB",
@@ -42,7 +52,12 @@
       "current_price": 76.2,
       "pnl_pct": -8.64,
       "value_usd": 76.2,
-      "last_updated": "2026-07-16T08:07:37.382949"
+      "last_updated": "2026-07-16T08:31:57.321290",
+      "stop_loss": 75.07,
+      "take_profit": 100.09,
+      "dist_to_sl_pp": 1.36,
+      "dist_to_tp_pp": 28.64,
+      "risk_flag": "DANGER"
     }
   ],
   "cash_usd": 257.7,
@@ -63,5 +78,5 @@
   "total_value_usd": 637.38,
   "total_pnl_usd": -3.65,
   "total_pnl_pct": -0.57,
-  "last_updated": "2026-07-16T08:07:37.382963"
+  "last_updated": "2026-07-16T08:31:57.321312"
 }
