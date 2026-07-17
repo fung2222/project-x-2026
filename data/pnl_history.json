@@ -145,25 +145,25 @@
   },
   {
     "date": "2026-07-17",
-    "total_value_usd": 624.28,
-    "total_pnl_pct": -2.61,
-    "total_pnl_usd": -16.75,
+    "total_value_usd": 616.11,
+    "total_pnl_pct": -3.89,
+    "total_pnl_usd": -24.92,
     "cash_usd": 257.7,
     "positions": [
       {
         "ticker": "NVDA",
-        "pnl_pct": 5.32,
-        "value_usd": 103.7
+        "pnl_pct": 3.0,
+        "value_usd": 101.42
       },
       {
         "ticker": "TSLA",
-        "pnl_pct": -2.94,
-        "value_usd": 195.53
+        "pnl_pct": -5.53,
+        "value_usd": 190.3
       },
       {
         "ticker": "RKLB",
-        "pnl_pct": -19.25,
-        "value_usd": 67.35
+        "pnl_pct": -20.05,
+        "value_usd": 66.69
       }
     ]
   }
