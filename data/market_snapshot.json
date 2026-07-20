@@ -1,67 +1,28 @@
 {
-  "timestamp": "2026-07-20T05:00:39.502172",
+  "timestamp": "2026-07-20T08:30:38.432083",
+  "label": "overnight_review",
   "vix": 18.77,
   "fx": 7.8398,
   "quotes": {
-    "NVDA": {
-      "ticker": "NVDA",
-      "price": 202.81,
-      "prev_close": 207.4,
-      "change_pct": -2.21,
-      "volume": 144033900,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-20T05:00:40.003926"
-    },
-    "TSLA": {
-      "ticker": "TSLA",
-      "price": 380.84,
-      "prev_close": 391.06,
-      "change_pct": -2.61,
-      "volume": 31317100,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-20T05:00:40.069778"
-    },
-    "RKLB": {
-      "ticker": "RKLB",
-      "price": 67.62,
-      "prev_close": 67.35,
-      "change_pct": 0.4,
-      "volume": 22258900,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-20T05:00:40.138232"
-    },
-    "AMD": {
-      "ticker": "AMD",
-      "price": 495.76,
-      "prev_close": 500.94,
-      "change_pct": -1.03,
-      "volume": 32069200,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-20T05:00:40.203873"
-    },
-    "MSFT": {
-      "ticker": "MSFT",
-      "price": 393.82,
-      "prev_close": 401.1,
-      "change_pct": -1.82,
-      "volume": 33010300,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-20T05:00:40.306940"
-    },
     "SPY": {
-      "ticker": "SPY",
       "price": 743.29,
       "prev_close": 750.72,
-      "change_pct": -0.99,
-      "volume": 62569200,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-20T05:00:40.433884"
+      "change_pct": -0.99
+    },
+    "NVDA": {
+      "price": 202.81,
+      "prev_close": 207.4,
+      "change_pct": -2.21
+    },
+    "TSLA": {
+      "price": 380.84,
+      "prev_close": 391.06,
+      "change_pct": -2.61
+    },
+    "RKLB": {
+      "price": 67.62,
+      "prev_close": 67.35,
+      "change_pct": 0.4
     }
   }
 }
