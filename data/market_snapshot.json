@@ -1,67 +1,28 @@
 {
-  "timestamp": "2026-07-22T05:00:18.423575",
+  "timestamp": "2026-07-22T08:30:19.122560",
+  "label": "overnight_review",
   "vix": 17.05,
   "fx": 7.8412,
   "quotes": {
-    "NVDA": {
-      "ticker": "NVDA",
-      "price": 207.29,
-      "prev_close": 203.28,
-      "change_pct": 1.97,
-      "volume": 108223095,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-22T05:00:18.955735"
-    },
-    "TSLA": {
-      "ticker": "TSLA",
-      "price": 378.93,
-      "prev_close": 369.57,
-      "change_pct": 2.53,
-      "volume": 31140392,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-22T05:00:19.022946"
-    },
-    "RKLB": {
-      "ticker": "RKLB",
-      "price": 69.12,
-      "prev_close": 65.74,
-      "change_pct": 5.14,
-      "volume": 17908699,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-22T05:00:19.095518"
-    },
-    "AMD": {
-      "ticker": "AMD",
-      "price": 544.43,
-      "prev_close": 503.57,
-      "change_pct": 8.11,
-      "volume": 27221951,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-22T05:00:19.166994"
-    },
-    "MSFT": {
-      "ticker": "MSFT",
-      "price": 397.75,
-      "prev_close": 402.29,
-      "change_pct": -1.13,
-      "volume": 23964731,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-22T05:00:19.270677"
-    },
     "SPY": {
-      "ticker": "SPY",
       "price": 748.28,
       "prev_close": 742.09,
-      "change_pct": 0.83,
-      "volume": 27416531,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-07-22T05:00:19.382827"
+      "change_pct": 0.83
+    },
+    "NVDA": {
+      "price": 207.29,
+      "prev_close": 203.28,
+      "change_pct": 1.97
+    },
+    "TSLA": {
+      "price": 378.93,
+      "prev_close": 369.57,
+      "change_pct": 2.53
+    },
+    "RKLB": {
+      "price": 69.12,
+      "prev_close": 65.74,
+      "change_pct": 5.14
     }
   }
 }
