@@ -71,6 +71,12 @@
       "file": "daily_report_2026-07-24.html",
       "summary": "開盤趨勢 ·  (-7.81%) · VIX 18.89",
       "pnl": -7.81
+    },
+    {
+      "date": "2026-07-27",
+      "file": "close_report_2026-07-27.html",
+      "summary": "收市趨勢 ·  (-9.28%) · VIX 18.58",
+      "pnl": -9.28
     }
   ]
 }
