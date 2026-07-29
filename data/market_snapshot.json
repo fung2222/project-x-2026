@@ -1,28 +1,67 @@
 {
-  "timestamp": "2026-07-29T08:30:57.058295",
-  "label": "overnight_review",
-  "vix": 18.21,
-  "fx": 7.8408,
+  "timestamp": "2026-07-30T05:00:16.200706",
+  "vix": 20.66,
+  "fx": 7.8421,
   "quotes": {
-    "SPY": {
-      "price": 740.86,
-      "prev_close": 739.09,
-      "change_pct": 0.24
-    },
     "NVDA": {
-      "price": 197.01,
-      "prev_close": 196.51,
-      "change_pct": 0.25
+      "ticker": "NVDA",
+      "price": 190.01,
+      "prev_close": 197.01,
+      "change_pct": -3.55,
+      "volume": 136609393,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-30T05:00:16.729780"
     },
     "TSLA": {
-      "price": 307.44,
-      "prev_close": 309.22,
-      "change_pct": -0.58
+      "ticker": "TSLA",
+      "price": 298.32,
+      "prev_close": 307.44,
+      "change_pct": -2.97,
+      "volume": 38734788,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-30T05:00:16.798518"
     },
     "RKLB": {
-      "price": 63.89,
-      "prev_close": 66.94,
-      "change_pct": -4.56
+      "ticker": "RKLB",
+      "price": 58.6,
+      "prev_close": 63.89,
+      "change_pct": -8.28,
+      "volume": 18697311,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-30T05:00:16.875622"
+    },
+    "AMD": {
+      "ticker": "AMD",
+      "price": 429.56,
+      "prev_close": 454.62,
+      "change_pct": -5.51,
+      "volume": 31474125,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-30T05:00:16.945726"
+    },
+    "MSFT": {
+      "ticker": "MSFT",
+      "price": 390.54,
+      "prev_close": 393.35,
+      "change_pct": -0.71,
+      "volume": 42418496,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-30T05:00:17.059282"
+    },
+    "SPY": {
+      "ticker": "SPY",
+      "price": 729.46,
+      "prev_close": 740.86,
+      "change_pct": -1.54,
+      "volume": 69069318,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-07-30T05:00:17.173598"
     }
   }
 }
