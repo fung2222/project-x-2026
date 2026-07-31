@@ -15,14 +15,14 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 98.47,
       "rationale": "AI 晶片龍頭，平均分第一注，建立基本倉位觀察",
-      "current_price": 195.04,
-      "pnl_pct": -0.96,
-      "value_usd": 97.52,
-      "last_updated": "2026-07-31T05:00:13.491037",
+      "current_price": 198.36,
+      "pnl_pct": 0.73,
+      "value_usd": 99.18,
+      "last_updated": "2026-07-31T21:30:28.243513",
       "stop_loss": 177.24,
       "take_profit": 236.32,
-      "dist_to_sl_pp": 9.04,
-      "dist_to_tp_pp": 20.96,
+      "dist_to_sl_pp": 10.73,
+      "dist_to_tp_pp": 19.27,
       "risk_flag": "OK"
     },
     {
@@ -32,14 +32,14 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 201.45,
       "rationale": "平均分第一注，學習情緒對股價影響",
-      "current_price": 308.85,
-      "pnl_pct": -23.34,
-      "value_usd": 154.43,
-      "last_updated": "2026-07-31T05:00:13.562254",
+      "current_price": 309.69,
+      "pnl_pct": -23.13,
+      "value_usd": 154.84,
+      "last_updated": "2026-07-31T21:30:28.314809",
       "stop_loss": 362.61,
       "take_profit": 483.48,
-      "dist_to_sl_pp": -13.34,
-      "dist_to_tp_pp": 43.34,
+      "dist_to_sl_pp": -13.13,
+      "dist_to_tp_pp": 43.13,
       "risk_flag": "STOP"
     },
     {
@@ -49,14 +49,14 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 83.41,
       "rationale": "平均分第一注，高波動股適合學止損",
-      "current_price": 64.68,
-      "pnl_pct": -22.46,
-      "value_usd": 64.68,
-      "last_updated": "2026-07-31T05:00:13.627286",
+      "current_price": 66.16,
+      "pnl_pct": -20.68,
+      "value_usd": 66.16,
+      "last_updated": "2026-07-31T21:30:28.392526",
       "stop_loss": 75.07,
       "take_profit": 100.09,
-      "dist_to_sl_pp": -12.46,
-      "dist_to_tp_pp": 42.46,
+      "dist_to_sl_pp": -10.68,
+      "dist_to_tp_pp": 40.68,
       "risk_flag": "STOP"
     }
   ],
@@ -75,8 +75,8 @@
       "details": "平均分 0.5/0.5/1.0 注，留 47% 現金等信號"
     }
   ],
-  "total_value_usd": 574.33,
-  "total_pnl_usd": -66.7,
-  "total_pnl_pct": -10.41,
-  "last_updated": "2026-07-31T05:00:13.627309"
+  "total_value_usd": 577.88,
+  "total_pnl_usd": -63.14,
+  "total_pnl_pct": -9.85,
+  "last_updated": "2026-07-31T21:30:28.392547"
 }
