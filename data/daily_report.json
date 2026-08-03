@@ -1,35 +1,35 @@
 {
-  "date": "2026-08-03 05:01 HKT",
+  "date": "2026-08-03 21:30 HKT",
   "data_cutoff_note": "⚠️ 數據來自 yfinance 真實報價；開盤時段波動大",
-  "vix": 15.99,
-  "spy": 747.03,
-  "fx_usdhkd": 7.8418,
+  "vix": 16.0,
+  "spy": 750.07,
+  "fx_usdhkd": 7.8419,
   "regime": "正常市場",
   "portfolio_bias": "組合偏空：優先防守，新倉暫緩",
   "signals": [
     {
       "ticker": "NVDA",
-      "price": 200.75,
-      "change_pct": 2.93,
+      "price": 197.51,
+      "change_pct": -1.61,
       "signal": "偏空觀望/減倉準備",
       "trend": "偏空回調",
-      "trend_score": -1,
+      "trend_score": -2,
       "action": "弱勢回調中：已持倉嚴守止損；未持倉暫唔好抄底",
       "confidence": 62,
-      "reason": "趨勢=偏空回調（score -1）。中期略弱；短線回吐；RSI健康(48.3)。",
-      "stop_loss_suggested": 180.68,
-      "take_profit_suggested": 240.9,
+      "reason": "趨勢=偏空回調（score -2）。中期略弱；短線弱勢；RSI健康(45.5)。",
+      "stop_loss_suggested": 177.76,
+      "take_profit_suggested": 237.01,
       "indicators": {
-        "price": 200.75,
-        "ma50": 206.12,
-        "ma20": 203.3,
-        "price_vs_ma50_pct": -2.61,
-        "price_vs_ma20_pct": -1.25,
-        "ma20_vs_ma50_pct": -1.37,
-        "chg_5d_pct": -2.94,
-        "chg_20d_pct": 3.04,
-        "rsi14": 48.3,
-        "volume_ratio": 1.09,
+        "price": 197.2,
+        "ma50": 205.6,
+        "ma20": 203.38,
+        "price_vs_ma50_pct": -4.09,
+        "price_vs_ma20_pct": -3.04,
+        "ma20_vs_ma50_pct": -1.08,
+        "chg_5d_pct": 0.35,
+        "chg_20d_pct": 0.84,
+        "rsi14": 45.5,
+        "volume_ratio": 0.03,
         "trend": "低於",
         "rsi_zone": "中性"
       }
@@ -63,16 +63,16 @@
     },
     {
       "ticker": "RKLB",
-      "price": 64.95,
-      "change_pct": 0.42,
+      "price": 63.16,
+      "change_pct": -2.76,
       "signal": "防禦/避免新倉",
       "trend": "下降趨勢",
       "trend_score": -4,
       "action": "趨勢偏空：優先風險控制；新資金暫時避開",
       "confidence": 70,
       "reason": "趨勢=下降趨勢（score -4）。中期偏弱(價遠低MA50)；短線弱勢；RSI偏弱(37.7)。",
-      "stop_loss_suggested": 58.46,
-      "take_profit_suggested": 77.94,
+      "stop_loss_suggested": 56.84,
+      "take_profit_suggested": 75.79,
       "indicators": {
         "price": 64.95,
         "ma50": 96.76,
@@ -92,13 +92,13 @@
   "secondary": [
     {
       "ticker": "AMD",
-      "price": 476.15,
-      "change_pct": -1.9
+      "price": 463.81,
+      "change_pct": -2.59
     },
     {
       "ticker": "MSFT",
-      "price": 464.72,
-      "change_pct": 3.02
+      "price": 476.83,
+      "change_pct": 2.61
     }
   ],
   "learning_focus": "今日重點：趨勢(score) + MA20/MA50 結構 + 止損距離，先守紀律再談進場"
