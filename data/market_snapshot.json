@@ -1,28 +1,67 @@
 {
-  "timestamp": "2026-08-18T08:30:35.050516",
-  "label": "overnight_review",
-  "vix": 15.19,
-  "fx": 7.8436,
+  "timestamp": "2026-08-19T05:00:25.009469",
+  "vix": 15.84,
+  "fx": 7.8435,
   "quotes": {
-    "SPY": {
-      "price": 772.67,
-      "prev_close": 776.34,
-      "change_pct": -0.47
-    },
     "NVDA": {
-      "price": 225.01,
-      "prev_close": 225.16,
-      "change_pct": -0.07
+      "ticker": "NVDA",
+      "price": 219.74,
+      "prev_close": 225.01,
+      "change_pct": -2.34,
+      "volume": 102376166,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-19T05:00:25.517641"
     },
     "TSLA": {
-      "price": 339.3,
-      "prev_close": 342.27,
-      "change_pct": -0.87
+      "ticker": "TSLA",
+      "price": 336.87,
+      "prev_close": 339.3,
+      "change_pct": -0.72,
+      "volume": 27113653,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-19T05:00:25.581032"
     },
     "RKLB": {
-      "price": 82.08,
-      "prev_close": 80.25,
-      "change_pct": 2.28
+      "ticker": "RKLB",
+      "price": 79.16,
+      "prev_close": 82.08,
+      "change_pct": -3.56,
+      "volume": 15292044,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-19T05:00:25.656411"
+    },
+    "AMD": {
+      "ticker": "AMD",
+      "price": 484.39,
+      "prev_close": 506.0,
+      "change_pct": -4.27,
+      "volume": 23516128,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-19T05:00:25.730799"
+    },
+    "MSFT": {
+      "ticker": "MSFT",
+      "price": 481.63,
+      "prev_close": 480.35,
+      "change_pct": 0.27,
+      "volume": 23714829,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-19T05:00:25.815096"
+    },
+    "SPY": {
+      "ticker": "SPY",
+      "price": 767.45,
+      "prev_close": 772.67,
+      "change_pct": -0.68,
+      "volume": 43244035,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-19T05:00:25.913403"
     }
   }
 }
