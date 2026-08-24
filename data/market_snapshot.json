@@ -1,28 +1,67 @@
 {
-  "timestamp": "2026-08-24T08:30:34.551707",
-  "label": "overnight_review",
-  "vix": 15.13,
-  "fx": 7.8387,
+  "timestamp": "2026-08-25T05:00:39.073413",
+  "vix": 15.85,
+  "fx": 7.8358,
   "quotes": {
-    "SPY": {
-      "price": 765.72,
-      "prev_close": 762.6,
-      "change_pct": 0.41
-    },
     "NVDA": {
-      "price": 214.72,
-      "prev_close": 216.85,
-      "change_pct": -0.98
+      "ticker": "NVDA",
+      "price": 208.48,
+      "prev_close": 214.72,
+      "change_pct": -2.91,
+      "volume": 133148851,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-25T05:00:39.734449"
     },
     "TSLA": {
-      "price": 362.86,
-      "prev_close": 345.13,
-      "change_pct": 5.14
+      "ticker": "TSLA",
+      "price": 348.95,
+      "prev_close": 362.86,
+      "change_pct": -3.83,
+      "volume": 38021032,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-25T05:00:39.750008"
     },
     "RKLB": {
-      "price": 72.57,
-      "prev_close": 72.95,
-      "change_pct": -0.52
+      "ticker": "RKLB",
+      "price": 68.28,
+      "prev_close": 72.57,
+      "change_pct": -5.91,
+      "volume": 13655455,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-25T05:00:39.764236"
+    },
+    "AMD": {
+      "ticker": "AMD",
+      "price": 456.74,
+      "prev_close": 473.25,
+      "change_pct": -3.49,
+      "volume": 14244025,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-25T05:00:39.833801"
+    },
+    "MSFT": {
+      "ticker": "MSFT",
+      "price": 487.31,
+      "prev_close": 483.24,
+      "change_pct": 0.84,
+      "volume": 16752429,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-25T05:00:39.939657"
+    },
+    "SPY": {
+      "ticker": "SPY",
+      "price": 763.47,
+      "prev_close": 765.72,
+      "change_pct": -0.29,
+      "volume": 31916629,
+      "verified": true,
+      "source": "yfinance",
+      "timestamp": "2026-08-25T05:00:40.036639"
     }
   }
 }
