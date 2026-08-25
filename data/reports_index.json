@@ -203,6 +203,12 @@
       "file": "daily_report_2026-08-25.html",
       "summary": "開盤趨勢 ·  (-5.21%) · VIX 15.85",
       "pnl": -5.21
+    },
+    {
+      "date": "2026-08-26",
+      "file": "close_report_2026-08-26.html",
+      "summary": "收市趨勢 ·  (-5.42%) · VIX 15.45",
+      "pnl": -5.42
     }
   ]
 }
