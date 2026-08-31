@@ -1,67 +1,28 @@
 {
-  "timestamp": "2026-08-31T05:00:59.391277",
+  "timestamp": "2026-08-31T08:30:23.186107",
+  "label": "overnight_review",
   "vix": 14.51,
-  "fx": 7.8396,
+  "fx": 7.8402,
   "quotes": {
-    "NVDA": {
-      "ticker": "NVDA",
-      "price": 227.98,
-      "prev_close": 209.66,
-      "change_pct": 8.74,
-      "volume": 298909800,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-08-31T05:00:59.917252"
-    },
-    "TSLA": {
-      "ticker": "TSLA",
-      "price": 354.81,
-      "prev_close": 345.82,
-      "change_pct": 2.6,
-      "volume": 30136200,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-08-31T05:00:59.987150"
-    },
-    "RKLB": {
-      "ticker": "RKLB",
-      "price": 67.53,
-      "prev_close": 66.18,
-      "change_pct": 2.04,
-      "volume": 11492100,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-08-31T05:01:00.060527"
-    },
-    "AMD": {
-      "ticker": "AMD",
-      "price": 476.67,
-      "prev_close": 480.93,
-      "change_pct": -0.89,
-      "volume": 16441800,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-08-31T05:01:00.146037"
-    },
-    "MSFT": {
-      "ticker": "MSFT",
-      "price": 505.06,
-      "prev_close": 496.37,
-      "change_pct": 1.75,
-      "volume": 28688800,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-08-31T05:01:00.260367"
-    },
     "SPY": {
-      "ticker": "SPY",
       "price": 771.1,
       "prev_close": 766.08,
-      "change_pct": 0.66,
-      "volume": 34557100,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-08-31T05:01:00.368399"
+      "change_pct": 0.66
+    },
+    "NVDA": {
+      "price": 227.98,
+      "prev_close": 209.66,
+      "change_pct": 8.74
+    },
+    "TSLA": {
+      "price": 354.81,
+      "prev_close": 345.82,
+      "change_pct": 2.6
+    },
+    "RKLB": {
+      "price": 67.53,
+      "prev_close": 66.18,
+      "change_pct": 2.04
     }
   }
 }
