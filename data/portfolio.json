@@ -18,7 +18,7 @@
       "current_price": 228.45,
       "pnl_pct": 16.01,
       "value_usd": 114.22,
-      "last_updated": "2026-09-04T05:00:53.769289",
+      "last_updated": "2026-09-04T21:30:09.667776",
       "stop_loss": 177.24,
       "take_profit": 236.32,
       "dist_to_sl_pp": 26.01,
@@ -32,14 +32,14 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 201.45,
       "rationale": "平均分第一注，學習情緒對股價影響",
-      "current_price": 376.36,
-      "pnl_pct": -6.59,
-      "value_usd": 188.18,
-      "last_updated": "2026-09-04T05:00:53.830323",
+      "current_price": 376.37,
+      "pnl_pct": -6.58,
+      "value_usd": 188.19,
+      "last_updated": "2026-09-04T21:30:09.729856",
       "stop_loss": 362.61,
       "take_profit": 483.48,
-      "dist_to_sl_pp": 3.41,
-      "dist_to_tp_pp": 26.59,
+      "dist_to_sl_pp": 3.42,
+      "dist_to_tp_pp": 26.58,
       "risk_flag": "OK"
     },
     {
@@ -52,7 +52,7 @@
       "current_price": 63.81,
       "pnl_pct": -23.5,
       "value_usd": 63.81,
-      "last_updated": "2026-09-04T05:00:53.897005",
+      "last_updated": "2026-09-04T21:30:09.800284",
       "stop_loss": 75.07,
       "take_profit": 100.09,
       "dist_to_sl_pp": -13.5,
@@ -75,8 +75,8 @@
       "details": "平均分 0.5/0.5/1.0 注，留 47% 現金等信號"
     }
   ],
-  "total_value_usd": 623.91,
-  "total_pnl_usd": -17.12,
+  "total_value_usd": 623.92,
+  "total_pnl_usd": -17.11,
   "total_pnl_pct": -2.67,
-  "last_updated": "2026-09-04T05:00:53.897025"
+  "last_updated": "2026-09-04T21:30:09.800304"
 }

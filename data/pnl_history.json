@@ -985,9 +985,9 @@
   },
   {
     "date": "2026-09-04",
-    "total_value_usd": 623.91,
+    "total_value_usd": 623.92,
     "total_pnl_pct": -2.67,
-    "total_pnl_usd": -17.12,
+    "total_pnl_usd": -17.11,
     "cash_usd": 257.7,
     "positions": [
       {
@@ -997,8 +997,8 @@
       },
       {
         "ticker": "TSLA",
-        "pnl_pct": -6.59,
-        "value_usd": 188.18
+        "pnl_pct": -6.58,
+        "value_usd": 188.19
       },
       {
         "ticker": "RKLB",

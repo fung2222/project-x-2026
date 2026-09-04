@@ -1,9 +1,9 @@
 {
-  "date": "2026-09-04 05:00 HKT",
+  "date": "2026-09-04 21:30 HKT",
   "data_cutoff_note": "⚠️ 數據來自 yfinance 真實報價；開盤時段波動大",
-  "vix": 14.32,
-  "spy": 773.17,
-  "fx_usdhkd": 7.8393,
+  "vix": 14.14,
+  "spy": 771.93,
+  "fx_usdhkd": 7.8404,
   "regime": "正常市場",
   "portfolio_bias": "組合偏多：可持有強勢股，弱勢股單獨管理",
   "signals": [
@@ -29,14 +29,14 @@
         "chg_5d_pct": 0.21,
         "chg_20d_pct": 4.32,
         "rsi14": 59.2,
-        "volume_ratio": 1.03,
+        "volume_ratio": 1.05,
         "trend": "高於",
         "rsi_zone": "中性"
       }
     },
     {
       "ticker": "TSLA",
-      "price": 376.36,
+      "price": 376.37,
       "change_pct": 5.42,
       "signal": "偏多持有/可分批佈局",
       "trend": "上升趨勢",
@@ -44,10 +44,10 @@
       "action": "趨勢偏多：可持有；若未持倉可等回踩 MA20 分批觀察",
       "confidence": 76,
       "reason": "趨勢=上升趨勢（score +6）。中期偏強(價>MA50)；短線回穩；RSI健康(60.5)；5日+6.08%。",
-      "stop_loss_suggested": 338.72,
-      "take_profit_suggested": 451.63,
+      "stop_loss_suggested": 338.73,
+      "take_profit_suggested": 451.64,
       "indicators": {
-        "price": 376.36,
+        "price": 376.37,
         "ma50": 358.37,
         "ma20": 347.16,
         "price_vs_ma50_pct": 5.02,
@@ -56,7 +56,7 @@
         "chg_5d_pct": 6.08,
         "chg_20d_pct": 17.79,
         "rsi14": 60.5,
-        "volume_ratio": 1.71,
+        "volume_ratio": 1.72,
         "trend": "高於",
         "rsi_zone": "中性"
       }
@@ -83,7 +83,7 @@
         "chg_5d_pct": -5.51,
         "chg_20d_pct": -15.67,
         "rsi14": 36.1,
-        "volume_ratio": 1.06,
+        "volume_ratio": 1.07,
         "trend": "低於",
         "rsi_zone": "中性"
       }
