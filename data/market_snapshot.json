@@ -1,67 +1,28 @@
 {
-  "timestamp": "2026-09-08T05:00:53.041726",
+  "timestamp": "2026-09-08T08:30:56.549553",
+  "label": "overnight_review",
   "vix": 15.3,
-  "fx": 7.8391,
+  "fx": 7.8393,
   "quotes": {
-    "NVDA": {
-      "ticker": "NVDA",
-      "price": 230.36,
-      "prev_close": 228.45,
-      "change_pct": 0.84,
-      "volume": 134946800,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-09-08T05:00:53.735404"
-    },
-    "TSLA": {
-      "ticker": "TSLA",
-      "price": 354.08,
-      "prev_close": 376.37,
-      "change_pct": -5.92,
-      "volume": 64829000,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-09-08T05:00:53.806150"
-    },
-    "RKLB": {
-      "ticker": "RKLB",
-      "price": 64.26,
-      "prev_close": 63.81,
-      "change_pct": 0.71,
-      "volume": 14867600,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-09-08T05:00:53.875436"
-    },
-    "AMD": {
-      "ticker": "AMD",
-      "price": 477.57,
-      "prev_close": 456.16,
-      "change_pct": 4.69,
-      "volume": 19651900,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-09-08T05:00:53.944881"
-    },
-    "MSFT": {
-      "ticker": "MSFT",
-      "price": 499.7,
-      "prev_close": 510.12,
-      "change_pct": -2.04,
-      "volume": 18074400,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-09-08T05:00:54.036889"
-    },
     "SPY": {
-      "ticker": "SPY",
       "price": 770.19,
       "prev_close": 773.17,
-      "change_pct": -0.39,
-      "volume": 34015600,
-      "verified": true,
-      "source": "yfinance",
-      "timestamp": "2026-09-08T05:00:54.142508"
+      "change_pct": -0.39
+    },
+    "NVDA": {
+      "price": 230.36,
+      "prev_close": 228.45,
+      "change_pct": 0.84
+    },
+    "TSLA": {
+      "price": 354.08,
+      "prev_close": 376.37,
+      "change_pct": -5.92
+    },
+    "RKLB": {
+      "price": 64.26,
+      "prev_close": 63.81,
+      "change_pct": 0.71
     }
   }
 }
