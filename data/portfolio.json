@@ -15,14 +15,14 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 98.47,
       "rationale": "AI 晶片龍頭，平均分第一注，建立基本倉位觀察",
-      "current_price": 212.17,
-      "pnl_pct": 7.74,
-      "value_usd": 106.08,
-      "last_updated": "2026-09-16T05:00:10.318807",
+      "current_price": 213.91,
+      "pnl_pct": 8.62,
+      "value_usd": 106.95,
+      "last_updated": "2026-09-16T21:30:15.728162",
       "stop_loss": 177.24,
       "take_profit": 236.32,
-      "dist_to_sl_pp": 17.74,
-      "dist_to_tp_pp": 12.26,
+      "dist_to_sl_pp": 18.62,
+      "dist_to_tp_pp": 11.38,
       "risk_flag": "OK"
     },
     {
@@ -35,7 +35,7 @@
       "current_price": 356.58,
       "pnl_pct": -11.5,
       "value_usd": 178.29,
-      "last_updated": "2026-09-16T05:00:10.387375",
+      "last_updated": "2026-09-16T21:30:15.809287",
       "stop_loss": 362.61,
       "take_profit": 483.48,
       "dist_to_sl_pp": -1.5,
@@ -52,7 +52,7 @@
       "current_price": 63.55,
       "pnl_pct": -23.81,
       "value_usd": 63.55,
-      "last_updated": "2026-09-16T05:00:10.455246",
+      "last_updated": "2026-09-16T21:30:15.885790",
       "stop_loss": 75.07,
       "take_profit": 100.09,
       "dist_to_sl_pp": -13.81,
@@ -75,8 +75,8 @@
       "details": "平均分 0.5/0.5/1.0 注，留 47% 現金等信號"
     }
   ],
-  "total_value_usd": 605.62,
-  "total_pnl_usd": -35.41,
-  "total_pnl_pct": -5.52,
-  "last_updated": "2026-09-16T05:00:10.455268"
+  "total_value_usd": 606.49,
+  "total_pnl_usd": -34.54,
+  "total_pnl_pct": -5.39,
+  "last_updated": "2026-09-16T21:30:15.885816"
 }
