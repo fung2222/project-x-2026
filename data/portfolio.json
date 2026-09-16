@@ -15,10 +15,10 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 98.47,
       "rationale": "AI 晶片龍頭，平均分第一注，建立基本倉位觀察",
-      "current_price": 213.91,
+      "current_price": 213.9,
       "pnl_pct": 8.62,
       "value_usd": 106.95,
-      "last_updated": "2026-09-16T21:30:15.728162",
+      "last_updated": "2026-09-17T05:00:28.920198",
       "stop_loss": 177.24,
       "take_profit": 236.32,
       "dist_to_sl_pp": 18.62,
@@ -32,14 +32,14 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 201.45,
       "rationale": "平均分第一注，學習情緒對股價影響",
-      "current_price": 356.58,
-      "pnl_pct": -11.5,
-      "value_usd": 178.29,
-      "last_updated": "2026-09-16T21:30:15.809287",
+      "current_price": 358.08,
+      "pnl_pct": -11.12,
+      "value_usd": 179.04,
+      "last_updated": "2026-09-17T05:00:28.995041",
       "stop_loss": 362.61,
       "take_profit": 483.48,
-      "dist_to_sl_pp": -1.5,
-      "dist_to_tp_pp": 31.5,
+      "dist_to_sl_pp": -1.12,
+      "dist_to_tp_pp": 31.12,
       "risk_flag": "STOP"
     },
     {
@@ -49,14 +49,14 @@
       "entry_date": "2026-07-08",
       "cost_basis_usd": 83.41,
       "rationale": "平均分第一注，高波動股適合學止損",
-      "current_price": 63.55,
-      "pnl_pct": -23.81,
-      "value_usd": 63.55,
-      "last_updated": "2026-09-16T21:30:15.885790",
+      "current_price": 63.7,
+      "pnl_pct": -23.63,
+      "value_usd": 63.7,
+      "last_updated": "2026-09-17T05:00:29.070818",
       "stop_loss": 75.07,
       "take_profit": 100.09,
-      "dist_to_sl_pp": -13.81,
-      "dist_to_tp_pp": 43.81,
+      "dist_to_sl_pp": -13.63,
+      "dist_to_tp_pp": 43.63,
       "risk_flag": "STOP"
     }
   ],
@@ -75,8 +75,8 @@
       "details": "平均分 0.5/0.5/1.0 注，留 47% 現金等信號"
     }
   ],
-  "total_value_usd": 606.49,
-  "total_pnl_usd": -34.54,
-  "total_pnl_pct": -5.39,
-  "last_updated": "2026-09-16T21:30:15.885816"
+  "total_value_usd": 607.39,
+  "total_pnl_usd": -33.64,
+  "total_pnl_pct": -5.25,
+  "last_updated": "2026-09-17T05:00:29.070837"
 }
