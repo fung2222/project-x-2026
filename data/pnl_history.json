@@ -1222,5 +1222,29 @@
         "value_usd": 63.7
       }
     ]
+  },
+  {
+    "date": "2026-09-21",
+    "total_value_usd": 615.54,
+    "total_pnl_pct": -3.98,
+    "total_pnl_usd": -25.49,
+    "cash_usd": 257.7,
+    "positions": [
+      {
+        "ticker": "NVDA",
+        "pnl_pct": 12.87,
+        "value_usd": 111.14
+      },
+      {
+        "ticker": "TSLA",
+        "pnl_pct": -9.59,
+        "value_usd": 182.13
+      },
+      {
+        "ticker": "RKLB",
+        "pnl_pct": -22.59,
+        "value_usd": 64.57
+      }
+    ]
   }
 ]
