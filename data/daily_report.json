@@ -1,9 +1,9 @@
 {
-  "date": "2026-09-25 05:00 HKT",
+  "date": "2026-09-25 21:30 HKT",
   "data_cutoff_note": "⚠️ 數據來自 yfinance 真實報價；開盤時段波動大",
-  "vix": 15.67,
-  "spy": 767.18,
-  "fx_usdhkd": 7.842,
+  "vix": 15.13,
+  "spy": 768.31,
+  "fx_usdhkd": 7.844,
   "regime": "正常市場",
   "portfolio_bias": "組合偏多：可持有強勢股，弱勢股單獨管理",
   "signals": [
@@ -29,7 +29,7 @@
         "chg_5d_pct": 2.39,
         "chg_20d_pct": 7.24,
         "rsi14": 54.8,
-        "volume_ratio": 0.6,
+        "volume_ratio": 0.61,
         "trend": "高於",
         "rsi_zone": "中性"
       }

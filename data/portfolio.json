@@ -18,7 +18,7 @@
       "current_price": 224.58,
       "pnl_pct": 14.04,
       "value_usd": 112.29,
-      "last_updated": "2026-09-25T05:00:42.992368",
+      "last_updated": "2026-09-25T21:30:11.768807",
       "stop_loss": 177.24,
       "take_profit": 236.32,
       "dist_to_sl_pp": 24.04,
@@ -35,7 +35,7 @@
       "current_price": 377.94,
       "pnl_pct": -6.2,
       "value_usd": 188.97,
-      "last_updated": "2026-09-25T05:00:43.121584",
+      "last_updated": "2026-09-25T21:30:11.834824",
       "stop_loss": 362.61,
       "take_profit": 483.48,
       "dist_to_sl_pp": 3.8,
@@ -52,7 +52,7 @@
       "current_price": 73.61,
       "pnl_pct": -11.75,
       "value_usd": 73.61,
-      "last_updated": "2026-09-25T05:00:43.224452",
+      "last_updated": "2026-09-25T21:30:11.909317",
       "stop_loss": 75.07,
       "take_profit": 100.09,
       "dist_to_sl_pp": -1.75,
@@ -78,5 +78,5 @@
   "total_value_usd": 632.57,
   "total_pnl_usd": -8.46,
   "total_pnl_pct": -1.32,
-  "last_updated": "2026-09-25T05:00:43.224473"
+  "last_updated": "2026-09-25T21:30:11.909329"
 }
